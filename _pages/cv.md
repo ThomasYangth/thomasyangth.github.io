@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Physics, GitHub University, 2023 (expected)
+* B.S. in Physics, Peking University, 2023 (expected)
 
 Research experience
 ======
