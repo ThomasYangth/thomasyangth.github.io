@@ -11,22 +11,23 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Physics, GitHub University, 2023 (expected)
 
-Work experience
+Research experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Undergraduate Research, 2020-2022
+  * Peking University
+  * Supervisor: Prof. Xiong-Jun Liu
+  * Topic: Quantum simulation in optical Raman lattices and Rydberg atom systems.
+* Summer Research 2022
+  * Institute of Physics, Chinese Academy of Sciences
+  * Supervisor: Prof. Chen Fang
+  * Topic: Non-Hermitian Topology.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* Undergraduate Thesis, 2022-
+  * Peking University
+  * Supervisor: Prof. Zhi-Cheng Yang
+  * Topic: Quantum information.
 Skills
 ======
 * Skill 1
@@ -41,19 +42,9 @@ Publications
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
