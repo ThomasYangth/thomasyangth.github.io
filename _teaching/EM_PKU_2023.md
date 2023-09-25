@@ -8,4 +8,4 @@ date: 2023
 location: "Beijing, China"
 ---
 
-Teaching assistant for the undergraduate course "Electromagnetism", term Spring 23, with Prof. Shina Tan. Planned.
+Teaching assistant for the undergraduate course "Electromagnetism", semster Spring 23, with Prof. Shina Tan. Awarded "outstanding TA".
