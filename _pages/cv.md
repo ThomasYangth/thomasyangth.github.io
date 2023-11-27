@@ -11,7 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.S. in Physics, Peking University, 2023 (expected)
+* Ph.D. Student in Physics, Princeton University, 2023 - present
+* B.S. in Physics, Peking University, 2023 (with honors)
 
 Research experience
 ======
@@ -19,6 +20,7 @@ Research experience
   * Peking University
   * Supervisor: Prof. Xiong-Jun Liu
   * Topic: Quantum simulation in optical Raman lattices and Rydberg atom systems.
+  
 * Summer Research 2022
   * Institute of Physics, Chinese Academy of Sciences
   * Supervisor: Prof. Chen Fang
@@ -27,14 +29,16 @@ Research experience
 * Undergraduate Thesis, 2022-
   * Peking University
   * Supervisor: Prof. Zhi-Cheng Yang
-  * Topic: Quantum information.
+  * Topic: Quantum thermalization.
+  
 Skills
 ======
 * Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
+* Programming
+  * Python
+  * Julia with ITensor
+  * Mathematica
+  * Matlab
 * Skill 3
 
 Publications
