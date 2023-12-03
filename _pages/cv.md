@@ -26,20 +26,19 @@ Research experience
   * Supervisor: Prof. Chen Fang
   * Topic: Non-Hermitian Topology.
 
-* Undergraduate Thesis, 2022-
+* Undergraduate Thesis, 2022-2023
   * Peking University
   * Supervisor: Prof. Zhi-Cheng Yang
   * Topic: Quantum thermalization.
   
 Skills
 ======
-* Skill 1
 * Programming
   * Python
   * Julia with ITensor
   * Mathematica
   * Matlab
-* Skill 3
+* Not sure what counts as "Skills" lmao
 
 Publications
 ======
