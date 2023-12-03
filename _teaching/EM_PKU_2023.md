@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/EM_PKU_2023
 venue: "Peking University"
-date: "Spring 2023"
+date: 2023-03-01
 location: "Beijing, China"
 ---
 
