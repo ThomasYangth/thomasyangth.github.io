@@ -2,7 +2,7 @@
 title: "Quantum Hall states for Rydberg arrays with laser-assisted dipole-dipole interactions"
 collection: publications
 permalink: /publication/LADDI-2022
-excerpt: 'Proposed a laser-based mechanism to generate tunable gauge fields in Rydberg atom arrays'
+excerpt: 'We proposed a laser-based mechanism to generate tunable gauge fields in Rydberg atom arrays, which enabled the realization of several interesting models on Rydberg platforms.'
 date: 2022-08-08
 venue: 'Physical Review A'
 paperurl: 'https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.L021101'
