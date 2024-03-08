@@ -12,6 +12,6 @@ My name is Tian-Hua Yang, and I am currently a first-year graduate student in th
 
 My research interest lies in many-body quantum dynamics, specifically in understanding the mechanisms behind thermalization and its absence. I am currently focused on the role of integrals of motion in quantum many-body systems, their impact on dynamics and steady states, and their stability against external disturbances.
 
-Research I have done during my undergraduate studies include quantum simulations in optical Raman lattices and Rydberg atom systems, as well as non-Hermitian band theory and topology.
+I have also done research on quantum simulations and non-Hermitian physics.
 
 See a list of my publications on <a href="https://scholar.google.com/citations?user=MXF9R18AAAAJ&hl=en">Google Scholar</a>.
