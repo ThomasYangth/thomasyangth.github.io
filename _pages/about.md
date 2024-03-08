@@ -15,3 +15,5 @@ My research interest lies in many-body quantum dynamics, specifically in underst
 I have also done research on quantum simulations and non-Hermitian physics.
 
 See a list of my publications on <a href="https://scholar.google.com/citations?user=MXF9R18AAAAJ&hl=en">Google Scholar</a>.
+
+Contact me at <a href="mailto:yangth@princeton.edu">yangth@princeton.edu</a>.
