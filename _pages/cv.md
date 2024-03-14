@@ -14,7 +14,7 @@ Education
 * Ph.D. Student in Physics, Princeton University, 2023 - present
 * B.S. in Physics, Peking University, 2023 (with honors)
 
-Research experience
+Past research experience
 ======
 * Undergraduate Research, 2020-2022
   * Peking University
@@ -38,7 +38,6 @@ Skills
   * Julia with ITensor
   * Mathematica
   * Matlab
-* Not sure what counts as "Skills" lmao
 
 Publications
 ======
