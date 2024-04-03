@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-The following is a selected list of my publications as of September 2023.
+The following is a selected list of my publications as of March 2024.
 
 You can also find my articles on <a href="https://scholar.google.com/citations?user=MXF9R18AAAAJ&hl=en">my Google Scholar profile page</a>.
 
