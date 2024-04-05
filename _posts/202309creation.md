@@ -1,7 +1,7 @@
 ---
 title: 'Blog Post number 1'
 date: 2023-09-01
-permalink: /posts/2023/09/creation
+permalink: /posts/2023/creation
 tags:
   - about this site
 ---
