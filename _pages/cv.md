@@ -10,12 +10,12 @@ redirect_from:
 {% include base_path %}
 
 Education
-======
+------
 * Ph.D. Student in Physics, Princeton University, 2023 - present
 * B.S. in Physics, Peking University, 2023 (with honors)
 
 Past research experience
-======
+------
 * Undergraduate Research, 2020-2022
   * Peking University
   * Supervisor: Prof. Xiong-Jun Liu
@@ -32,7 +32,7 @@ Past research experience
   * Topic: Quantum thermalization.
   
 Skills
-======
+------
 * Programming
   * Python
   * Julia with ITensor
@@ -40,13 +40,13 @@ Skills
   * Matlab
 
 Publications
-======
+------
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
 Teaching
-======
+------
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
