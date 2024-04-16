@@ -12,7 +12,7 @@ My name is Tian-Hua Yang, and I am currently a first-year graduate student in th
 
 My research interest lies in many-body quantum dynamics, specifically in understanding the mechanisms behind thermalization and its absence. I am currently focused on the role of integrals of motion in quantum many-body systems, their impact on dynamics and steady states, and their stability against external disturbances.
 
-I have also done research on quantum simulations and non-Hermitian physics. I am recently interested in finding applications of non-Hermitian physics in open many-body quantum systems / non-unitary quantum dynamics.
+My research experience also includes quantum simulations and non-Hermitian physics. I am recently interested in extending the ideas of non-Hermitian physics to the broader context of non-normal operators, and see what traces does non-normality leave on dissipative / non-unitary quantum dynamics.
 
 See a list of my publications on <a href="https://scholar.google.com/citations?user=MXF9R18AAAAJ&hl=en">Google Scholar</a>.
 
