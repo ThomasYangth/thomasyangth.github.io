@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Tian-Hua Yang's Home Page"
 title_separator          : "-"
 name                     : &name "Tian-Hua Yang"
-description              : &description "Academic Homepage of Tian-Hua Yang, Peking University"
+description              : &description "Academic Homepage of Tian-Hua Yang, Princeton University"
 url                      : https://thomasyangth.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ThomasYangth/thomasyangth.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Tian-Hua Yang"
   avatar           : "profile1.jpeg"
-  bio              : "G1 Student, Department of Physics, Princeton University."
+  bio              : "G2 Student, Department of Physics, Princeton University."
   location         : "Princeton, NJ"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
