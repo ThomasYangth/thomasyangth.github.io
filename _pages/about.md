@@ -8,9 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-My name is Tian-Hua Yang, and I am currently a second-year graduate student in the Department of Physics at Princeton University. My advisor is <a href="https://phy.princeton.edu/people/dmitry-abanin">Prof. Dima Abanin</a>.
+My name is Tian-Hua Yang. I am currently a rising third-year graduate student in the Department of Physics at Princeton University. My advisor is <a href="https://phy.princeton.edu/people/dmitry-abanin">Prof. Dima Abanin</a>.
 
-My research interest lies in the theory of many-body quantum dynamics. Broadly, I am interesting in all sorts of interesting phenomena and emergent structure hidden intricatedly in the vast Hilbert space of quantum many-body systems. In specific, I am focusing on (1) operator dynamics and (2) the role of dissipation. 
+My research interest lies in the theory of many-body quantum dynamics. Broadly, I am interesting in all sorts of interesting phenomena and emergent structure hidden intricatedly in the vast Hilbert space of quantum many-body systems. I am working on a range of topics, including:
+<ul>
+<li>dissipative (Lindbladian) dynamics, with an operator-space perspective;</li>
+<li>Hilbert space fragmentation;</li>
+<li>Hamiltonian learning;</li>
+</ul>
 
 I am also generally interested in: quantum simulations, non-Hermitian physics, and applying novel mathematical tools to quantum many-body physics.
 
