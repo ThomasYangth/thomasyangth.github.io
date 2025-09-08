@@ -12,9 +12,10 @@ My name is Tian-Hua Yang. I am currently a third-year graduate student in the De
 
 My research interest lies in the theory of many-body quantum dynamics. Broadly, I am interesting in all sorts of interesting phenomena and emergent structure hidden intricatedly in the vast Hilbert space of quantum many-body systems. I am working on a range of topics, including:
 <ul>
-<li>dissipative (Lindbladian) dynamics, with an operator-space perspective;</li>
-<li>Hilbert space fragmentation;</li>
+<li>Dissipative (Lindbladian) dynamics, with an operator-space perspective;</li>
 <li>Hamiltonian learning;</li>
+<li>Quantum thermalization;</li>
+<li>Hilbert space fragmentation;</li>
 </ul>
 
 I am also generally interested in: quantum simulations, non-Hermitian physics, and applying novel mathematical tools to quantum many-body physics.
