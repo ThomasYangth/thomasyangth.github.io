@@ -42,7 +42,10 @@ jobs:
           mdbook-version: "latest"
 
       - name: Build mdBook
-        run: mdbook build rematch-book --dest-dir ../_site/rematch
+        run: mdbook build rematch-book --dest-dir ${{ github.workspace }}/_site/rematch
+
+      - name: Verify mdBook output
+        run: ls -la _site/rematch/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
