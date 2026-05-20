@@ -146,6 +146,7 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - rematch-book
 keep_files:
   - .git
   - .svn
