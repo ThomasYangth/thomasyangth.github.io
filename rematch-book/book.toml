@@ -1,6 +1,5 @@
 [book]
 authors = ["Tian-Hua Yang"]
 language = "en"
-multilingual = false
 src = "src"
 title = "Rematch"
