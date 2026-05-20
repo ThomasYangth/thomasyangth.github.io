@@ -3,3 +3,6 @@ authors = ["Tian-Hua Yang"]
 language = "en"
 src = "src"
 title = "Rematch"
+
+[output.html]
+mathjax-support = true

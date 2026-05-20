@@ -180,3 +180,5 @@ e^{A+B} \approx \left(e^{A/2n}\, e^{B/n}\, e^{A/2n}\right)^n,
 whose error scales as \\(O(1/n^2)\\).
 
 **Why this matters.** In quantum simulation, we often have a Hamiltonian \\(H = H_1 + H_2 + \cdots + H_k\\) where each \\(H_j\\) is easy to exponentiate individually (e.g., a local term), but \\(H\\) itself is not. Trotterization lets us approximate the full time evolution \\(e^{-iHt}\\) as a product of simple unitaries, at the cost of a controllable error. This is the foundation of digital quantum simulation algorithms.
+
+*Last modified: 2026-05-20*

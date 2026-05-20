@@ -135,3 +135,5 @@ The existence or absence of phase transitions is one of the deepest questions in
 ---
 
 **Summary.** The classical Ising model assigns a binary spin \\( s_i = \pm 1 \\) to each site of a lattice, with an energy function that rewards alignment (for \\( J > 0 \\)) between neighbors. At thermal equilibrium, the probability of each configuration is given by the Boltzmann distribution \\( p \propto e^{-\beta H} \\), where the inverse temperature \\( \beta \\) controls the tradeoff between energetic order and entropic disorder. In the next chapter, we will see how this classical picture is modified when we allow the spins to be quantum mechanical.
+
+*Last modified: 2026-05-20*

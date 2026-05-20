@@ -267,3 +267,5 @@ Having \\( L \\) such conserved quantities (where \\( L \\) is the system size) 
 This distinction -- integrable vs. non-integrable, thermal vs. non-thermal -- is the central theme of this book, and the quantum Ising model in its various forms is the ideal laboratory for studying it. The TFIM (integrable) and the MFIM (non-integrable) give us two models that differ by a single term in the Hamiltonian, yet behave in qualitatively different ways.
 
 In the next chapters, we will develop the tools to make these ideas precise: the eigenstate thermalization hypothesis (ETH), the concept of level statistics, and the machinery of integrability.
+
+*Last modified: 2026-05-20*

@@ -115,3 +115,5 @@ This is a beautiful example of how the ideas from Chapters 3 and 4 -- integrals 
 ---
 
 **Summary.** The Gibbs state \\( \rho_{\text{th}} = e^{-\beta H}/\mathcal{Z} \\) is the quantum generalization of the Boltzmann distribution. Thermalization is the statement that local observables relax to their Gibbs state values under unitary evolution. Exact integrals of motion prevent full thermalization, because they pin certain expectation values to their initial (generically non-thermal) values; integrable systems instead relax to generalized Gibbs ensembles. Approximate integrals of motion lead to prethermalization: the system appears non-thermal on intermediate timescales before eventually reaching true thermal equilibrium. The MFIM, as a weakly broken integrable system, is a concrete example of prethermalization.
+
+*Last modified: 2026-05-20*

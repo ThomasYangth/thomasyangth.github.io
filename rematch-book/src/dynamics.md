@@ -155,3 +155,5 @@ If the right-hand side is small (in norm), then \\( A(t) \\) changes slowly. The
 Approximate integrals of motion turn out to be far more than a curiosity. In certain disordered systems, there exist *extensively many* approximate IOMs that remain nearly conserved for extraordinarily long times. This has profound consequences for the dynamics: the system retains a memory of its initial state far longer than one might naively expect. We will explore these ideas in the chapters ahead.
 
 **Looking forward.** The central question motivating the rest of this book is: *what physical consequences do approximate integrals of motion have?* In particular, when a system possesses many approximate IOMs, how does this constrain its approach to thermal equilibrium? This question will lead us to the phenomena of thermalization, many-body localization, and beyond.
+
+*Last modified: 2026-05-20*
