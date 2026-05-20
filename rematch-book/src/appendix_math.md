@@ -12,27 +12,27 @@ A **norm** on matrices assigns a non-negative size \\(\|A\|\\) to every matrix \
 \\[
 \|A\|_{\mathrm{op}} = \sigma_{\max}(A) = \max_{|v\rangle \neq 0} \frac{\|A|v\rangle\|}{\||v\rangle\|}.
 \\]
-For a Hermitian matrix, this equals the largest absolute eigenvalue. The operator norm is *submultiplicative*: \\(\|AB\|_{\mathrm{op}} \leq \|A\|_{\mathrm{op}}\|B\|_{\mathrm{op}}\\).
+For a Hermitian matrix, this equals the largest absolute eigenvalue. The operator norm is *submultiplicative*: \\(\|AB\|\_{\mathrm{op}} \leq \|A\|\_{\mathrm{op}}\|B\|\_{\mathrm{op}}\\).
 
 **Trace norm.** The trace norm is the sum of the singular values:
 \\[
 \|A\|_{\mathrm{tr}} = \mathrm{tr}\!\left(\sqrt{A^\dagger A}\right) = \sum_i \sigma_i(A).
 \\]
-This norm is central to distinguishing quantum states: the trace distance between density matrices \\(\rho\\) and \\(\sigma\\) is \\(\frac{1}{2}\|\rho - \sigma\|_{\mathrm{tr}}\\).
+This norm is central to distinguishing quantum states: the trace distance between density matrices \\(\rho\\) and \\(\sigma\\) is \\(\frac{1}{2}\|\rho - \sigma\|\_{\mathrm{tr}}\\).
 
 **Frobenius norm (Hilbert-Schmidt norm).** The Frobenius norm treats the matrix as a vector of its entries:
 \\[
 \|A\|_F = \sqrt{\mathrm{tr}(A^\dagger A)} = \sqrt{\sum_{i,j} |A_{ij}|^2}.
 \\]
-Equivalently, \\(\|A\|_F = \sqrt{\sum_i \sigma_i^2}\\). The Frobenius norm comes from the **Hilbert-Schmidt inner product** \\(\langle A, B \rangle = \mathrm{tr}(A^\dagger B)\\), which makes the space of operators into a Hilbert space in its own right. This is the norm we will use most often in this book: it is the natural choice for many-body operators and arises whenever we measure the "size" of an error by averaging over all input states.
+Equivalently, \\(\|A\|\_F = \sqrt{\sum\_i \sigma\_i^2}\\). The Frobenius norm comes from the **Hilbert-Schmidt inner product** \\(\langle A, B \rangle = \mathrm{tr}(A^\dagger B)\\), which makes the space of operators into a Hilbert space in its own right. This is the norm we will use most often in this book: it is the natural choice for many-body operators and arises whenever we measure the "size" of an error by averaging over all input states.
 
 **Relations between norms.** For a \\(D \times D\\) matrix \\(A\\),
 \\[
 \|A\|_{\mathrm{op}} \;\leq\; \|A\|_F \;\leq\; \sqrt{D}\,\|A\|_{\mathrm{op}}.
 \\]
-The left inequality follows because \\(\sigma_{\max} \leq \sqrt{\sum_i \sigma_i^2}\\). The right inequality follows because \\(A\\) has at most \\(D\\) nonzero singular values, each at most \\(\sigma_{\max}\\), so \\(\sum_i \sigma_i^2 \leq D\,\sigma_{\max}^2\\).
+The left inequality follows because \\(\sigma\_{\max} \leq \sqrt{\sum\_i \sigma\_i^2}\\). The right inequality follows because \\(A\\) has at most \\(D\\) nonzero singular values, each at most \\(\sigma\_{\max}\\), so \\(\sum\_i \sigma\_i^2 \leq D\,\sigma\_{\max}^2\\).
 
-**Example.** Let \\(A = \mathrm{diag}(3, 1, 1)\\). Then \\(\|A\|_{\mathrm{op}} = 3\\), \\(\|A\|_F = \sqrt{9 + 1 + 1} = \sqrt{11}\\), and \\(\|A\|_{\mathrm{tr}} = 5\\). Note \\(3 \leq \sqrt{11} \leq \sqrt{3} \cdot 3\\), consistent with the bounds above.
+**Example.** Let \\(A = \mathrm{diag}(3, 1, 1)\\). Then \\(\|A\|\_{\mathrm{op}} = 3\\), \\(\|A\|\_F = \sqrt{9 + 1 + 1} = \sqrt{11}\\), and \\(\|A\|\_{\mathrm{tr}} = 5\\). Note \\(3 \leq \sqrt{11} \leq \sqrt{3} \cdot 3\\), consistent with the bounds above.
 
 ---
 
@@ -44,9 +44,9 @@ The exponential of a square matrix \\(A\\) is defined by the power series
 \\[
 e^A = \sum_{n=0}^{\infty} \frac{A^n}{n!} = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \cdots
 \\]
-This series converges for every finite matrix \\(A\\) (convergence can be checked using the Frobenius norm, since \\(\|A^n\|_F \leq \|A\|_F^n\\)).
+This series converges for every finite matrix \\(A\\) (convergence can be checked using the Frobenius norm, since \\(\|A^n\|\_F \leq \|A\|\_F^n\\)).
 
-**Example (diagonal matrix).** If \\(A = \mathrm{diag}(\lambda_1, \ldots, \lambda_D)\\), the series acts entry-by-entry:
+**Example (diagonal matrix).** If \\(A = \mathrm{diag}(\lambda\_1, \ldots, \lambda\_D)\\), the series acts entry-by-entry:
 \\[
 e^A = \mathrm{diag}(e^{\lambda_1}, \ldots, e^{\lambda_D}).
 \\]
@@ -67,7 +67,7 @@ The matrix exponential arises as the solution to the first-order linear ODE
 \\[
 \frac{d\mathbf{x}}{dt} = A\,\mathbf{x}, \qquad \mathbf{x}(0) = \mathbf{x}_0.
 \\]
-Substituting \\(\mathbf{x}(t) = e^{At}\,\mathbf{x}_0\\) and differentiating term-by-term confirms this is a solution:
+Substituting \\(\mathbf{x}(t) = e^{At}\,\mathbf{x}\_0\\) and differentiating term-by-term confirms this is a solution:
 \\[
 \frac{d}{dt} e^{At} = A\, e^{At}.
 \\]
@@ -83,7 +83,7 @@ In quantum mechanics, the Schrodinger equation \\(i\frac{d}{dt}|\psi\rangle = H|
 \\[
 e^A e^B = e^{A+B}
 \\]
-holds **if and only if** \\([A, B] = 0\\). This is one of the most common pitfalls in quantum mechanics. For instance, if \\(H = H_1 + H_2\\) with \\([H_1, H_2] \neq 0\\), then \\(e^{-i(H_1 + H_2)t} \neq e^{-iH_1 t}\, e^{-iH_2 t}\\).
+holds **if and only if** \\([A, B] = 0\\). This is one of the most common pitfalls in quantum mechanics. For instance, if \\(H = H\_1 + H\_2\\) with \\([H\_1, H\_2] \neq 0\\), then \\(e^{-i(H\_1 + H\_2)t} \neq e^{-iH\_1 t}\, e^{-iH\_2 t}\\).
 
 *Sketch of proof.* Expand both sides to second order:
 \\[
@@ -132,13 +132,13 @@ A frequently needed formula is the expansion of a "conjugation by an exponential
 \\[
 e^A\, B\, e^{-A} = B + [A, B] + \frac{1}{2!}[A, [A, B]] + \frac{1}{3!}[A, [A, [A, B]]] + \cdots = \sum_{n=0}^{\infty} \frac{1}{n!}\,\mathrm{ad}_A^n(B),
 \\]
-where \\(\mathrm{ad}_A(B) = [A, B]\\) and \\(\mathrm{ad}_A^n\\) means applying the commutator \\(n\\) times.
+where \\(\mathrm{ad}\_A(B) = [A, B]\\) and \\(\mathrm{ad}\_A^n\\) means applying the commutator \\(n\\) times.
 
 *Proof sketch.* Define \\(f(t) = e^{tA}\, B\, e^{-tA}\\). Then \\(f(0) = B\\) and
 \\[
 f'(t) = A\, e^{tA}\, B\, e^{-tA} - e^{tA}\, B\, e^{-tA}\, A = [A, f(t)].
 \\]
-Iterating, \\(f^{(n)}(0) = \mathrm{ad}_A^n(B)\\), and the result follows by Taylor-expanding \\(f(t)\\) around \\(t = 0\\) and setting \\(t = 1\\).
+Iterating, \\(f^{(n)}(0) = \mathrm{ad}\_A^n(B)\\), and the result follows by Taylor-expanding \\(f(t)\\) around \\(t = 0\\) and setting \\(t = 1\\).
 
 **Example.** Take \\(A = -i\theta Z/2\\) and \\(B = X\\) (Pauli matrices). Since \\([Z, X] = 2iY\\) and \\([Z, Y] = -2iX\\), the series gives
 \\[
@@ -179,6 +179,6 @@ e^{A+B} \approx \left(e^{A/2n}\, e^{B/n}\, e^{A/2n}\right)^n,
 \\]
 whose error scales as \\(O(1/n^2)\\).
 
-**Why this matters.** In quantum simulation, we often have a Hamiltonian \\(H = H_1 + H_2 + \cdots + H_k\\) where each \\(H_j\\) is easy to exponentiate individually (e.g., a local term), but \\(H\\) itself is not. Trotterization lets us approximate the full time evolution \\(e^{-iHt}\\) as a product of simple unitaries, at the cost of a controllable error. This is the foundation of digital quantum simulation algorithms.
+**Why this matters.** In quantum simulation, we often have a Hamiltonian \\(H = H\_1 + H\_2 + \cdots + H\_k\\) where each \\(H\_j\\) is easy to exponentiate individually (e.g., a local term), but \\(H\\) itself is not. Trotterization lets us approximate the full time evolution \\(e^{-iHt}\\) as a product of simple unitaries, at the cost of a controllable error. This is the foundation of digital quantum simulation algorithms.
 
 *Last modified: 2026-05-20*

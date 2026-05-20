@@ -110,13 +110,13 @@ Define the **total magnetization** operator
 M = \sum_{i=1}^{n} Z_i.
 \\]
 
-Does \\( M \\) commute with \\( H_{ZZ} \\)? We need to check \\( [Z_i Z_{i+1},\, Z_j] \\) for each pair. Since \\( Z \\) matrices commute with each other (\\( [Z_i, Z_j] = 0 \\) for all \\( i, j \\)), we have
+Does \\( M \\) commute with \\( H\_{ZZ} \\)? We need to check \\( [Z\_i Z\_{i+1},\, Z\_j] \\) for each pair. Since \\( Z \\) matrices commute with each other (\\( [Z\_i, Z\_j] = 0 \\) for all \\( i, j \\)), we have
 
 \\[
 [H_{ZZ}, M] = -\sum_{i,j} [Z_i Z_{i+1}, Z_j] = 0.
 \\]
 
-So the total magnetization \\( M \\) is an integral of motion for \\( H_{ZZ} \\). Physically, this means that if you prepare a state with a definite total magnetization (say, 3 spins up and 2 down), the \\( ZZ \\) interaction alone can never change that total.
+So the total magnetization \\( M \\) is an integral of motion for \\( H\_{ZZ} \\). Physically, this means that if you prepare a state with a definite total magnetization (say, 3 spins up and 2 down), the \\( ZZ \\) interaction alone can never change that total.
 
 **What about the transverse field?** Now add the transverse-field term to get the TFIM:
 
@@ -124,13 +124,13 @@ So the total magnetization \\( M \\) is an integral of motion for \\( H_{ZZ} \\)
 H_{\text{TFIM}} = -\sum_{i} Z_i Z_{i+1} - h \sum_{i} X_i.
 \\]
 
-Is \\( M = \sum_i Z_i \\) still conserved? We need to check \\( [X_i, Z_i] \\). Recall from Chapter 1 that the Pauli matrices satisfy \\( [X, Z] = -2iY \\). Therefore:
+Is \\( M = \sum\_i Z\_i \\) still conserved? We need to check \\( [X\_i, Z\_i] \\). Recall from Chapter 1 that the Pauli matrices satisfy \\( [X, Z] = -2iY \\). Therefore:
 
 \\[
 \left[ -h \sum_i X_i, \; \sum_j Z_j \right] = -h \sum_i [X_i, Z_i] = -h \sum_i (-2iY_i) = 2ih \sum_i Y_i \neq 0.
 \\]
 
-The transverse field **breaks** the conservation of total magnetization. Intuitively, the \\( X_i \\) operator flips spin \\( i \\), so it changes the number of up-spins and down-spins. Once you turn on the transverse field, \\( \langle M \rangle \\) is no longer constant.
+The transverse field **breaks** the conservation of total magnetization. Intuitively, the \\( X\_i \\) operator flips spin \\( i \\), so it changes the number of up-spins and down-spins. Once you turn on the transverse field, \\( \langle M \rangle \\) is no longer constant.
 
 ### 3.4 Approximate Integrals of Motion
 
@@ -150,7 +150,7 @@ What does this mean physically? Return to the Heisenberg equation:
 
 If the right-hand side is small (in norm), then \\( A(t) \\) changes slowly. The expectation value \\( \langle A \rangle \\) is *nearly* constant -- it is conserved to a good approximation over some timescale, but eventually drifts. The smaller \\( \| [H, A] \| \\) is, the longer \\( A \\) remains approximately conserved.
 
-**Example.** Consider the TFIM with a weak transverse field, \\( h \ll 1 \\). We showed above that \\( [H_{\text{TFIM}}, M] \\) is proportional to \\( h \\). When \\( h \\) is small, the total magnetization is an approximate IOM: it is nearly conserved for times \\( t \ll 1/h \\), but eventually the transverse field causes it to drift.
+**Example.** Consider the TFIM with a weak transverse field, \\( h \ll 1 \\). We showed above that \\( [H\_{\text{TFIM}}, M] \\) is proportional to \\( h \\). When \\( h \\) is small, the total magnetization is an approximate IOM: it is nearly conserved for times \\( t \ll 1/h \\), but eventually the transverse field causes it to drift.
 
 Approximate integrals of motion turn out to be far more than a curiosity. In certain disordered systems, there exist *extensively many* approximate IOMs that remain nearly conserved for extraordinarily long times. This has profound consequences for the dynamics: the system retains a memory of its initial state far longer than one might naively expect. We will explore these ideas in the chapters ahead.
 

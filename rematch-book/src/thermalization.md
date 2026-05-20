@@ -16,9 +16,9 @@ How do we generalize this to quantum mechanics? In a quantum system, the Hamilto
 \boxed{\rho_{\text{th}} = \frac{e^{-\beta H}}{\text{tr}[e^{-\beta H}]}.}
 \\]
 
-Here \\( e^{-\beta H} \\) is the matrix exponential of \\( -\beta H \\) (see Appendix A), and the denominator \\( \mathcal{Z} = \text{tr}[e^{-\beta H}] \\) is the **partition function**, ensuring that \\( \text{tr}[\rho_{\text{th}}] = 1 \\).
+Here \\( e^{-\beta H} \\) is the matrix exponential of \\( -\beta H \\) (see Appendix A), and the denominator \\( \mathcal{Z} = \text{tr}[e^{-\beta H}] \\) is the **partition function**, ensuring that \\( \text{tr}[\rho\_{\text{th}}] = 1 \\).
 
-**Why is this the right generalization?** Let \\( H \\) have energy eigenstates \\( |n\rangle \\) with eigenvalues \\( E_n \\), so that \\( H|n\rangle = E_n |n\rangle \\). Then
+**Why is this the right generalization?** Let \\( H \\) have energy eigenstates \\( |n\rangle \\) with eigenvalues \\( E\_n \\), so that \\( H|n\rangle = E\_n |n\rangle \\). Then
 
 \\[
 e^{-\beta H} = \sum_n e^{-\beta E_n} |n\rangle\langle n|,
@@ -30,7 +30,7 @@ and therefore
 \rho_{\text{th}} = \sum_n \frac{e^{-\beta E_n}}{\mathcal{Z}} |n\rangle\langle n|, \qquad \mathcal{Z} = \sum_n e^{-\beta E_n}.
 \\]
 
-In the energy eigenbasis, the Gibbs state is **diagonal**, with the \\( n \\)-th diagonal entry equal to \\( e^{-\beta E_n}/\mathcal{Z} \\). This is exactly the Boltzmann distribution -- each energy level \\( E_n \\) is occupied with probability proportional to \\( e^{-\beta E_n} \\). For a classical Hamiltonian (one that is diagonal in the computational basis), the Gibbs state reduces precisely to the classical Boltzmann distribution from Chapter 1.
+In the energy eigenbasis, the Gibbs state is **diagonal**, with the \\( n \\)-th diagonal entry equal to \\( e^{-\beta E\_n}/\mathcal{Z} \\). This is exactly the Boltzmann distribution -- each energy level \\( E\_n \\) is occupied with probability proportional to \\( e^{-\beta E\_n} \\). For a classical Hamiltonian (one that is diagonal in the computational basis), the Gibbs state reduces precisely to the classical Boltzmann distribution from Chapter 1.
 
 The thermal expectation value of any observable \\( O \\) is computed as
 
@@ -38,7 +38,7 @@ The thermal expectation value of any observable \\( O \\) is computed as
 \langle O \rangle_{\text{th}} = \text{tr}[\rho_{\text{th}} \, O].
 \\]
 
-This is the quantum generalization of the classical formula \\( \langle O \rangle = \sum_{\mathbf{s}} p(\mathbf{s}) \, O(\mathbf{s}) \\).
+This is the quantum generalization of the classical formula \\( \langle O \rangle = \sum\_{\mathbf{s}} p(\mathbf{s}) \, O(\mathbf{s}) \\).
 
 ### 5.2 Thermalization
 
@@ -46,9 +46,9 @@ In Chapter 1, we simply *postulated* the Boltzmann distribution as the equilibri
 
 > **Why should a system ever reach the Gibbs state?**
 
-In quantum mechanics, the dynamics are unitary: starting from some initial state \\( |\psi(0)\rangle \\), the system evolves as \\( |\psi(t)\rangle = e^{-iHt}|\psi(0)\rangle \\). A **pure** state remains pure under unitary evolution -- it can never become a mixed state like \\( \rho_{\text{th}} \\). So in what sense can a system "thermalize"?
+In quantum mechanics, the dynamics are unitary: starting from some initial state \\( |\psi(0)\rangle \\), the system evolves as \\( |\psi(t)\rangle = e^{-iHt}|\psi(0)\rangle \\). A **pure** state remains pure under unitary evolution -- it can never become a mixed state like \\( \rho\_{\text{th}} \\). So in what sense can a system "thermalize"?
 
-The answer is subtle and important. We do not expect the full quantum state to become \\( \rho_{\text{th}} \\). Instead, **thermalization** is a statement about **local observables**: if \\( O \\) is an observable that acts on a small subsystem (for example, a few neighboring spins), then we say the system thermalizes if
+The answer is subtle and important. We do not expect the full quantum state to become \\( \rho\_{\text{th}} \\). Instead, **thermalization** is a statement about **local observables**: if \\( O \\) is an observable that acts on a small subsystem (for example, a few neighboring spins), then we say the system thermalizes if
 
 \\[
 \langle \psi(t) | O | \psi(t) \rangle \;\longrightarrow\; \text{tr}[\rho_{\text{th}} \, O] \qquad \text{as } t \to \infty,
@@ -68,7 +68,7 @@ Suppose \\( A \\) is an integral of motion, and we prepare an initial state \\( 
 \langle \psi(0) | A | \psi(0) \rangle \neq \text{tr}[\rho_{\text{th}} \, A].
 \\]
 
-That is, the initial expectation value of \\( A \\) differs from its thermal value. Since \\( A \\) is conserved, we have \\( \langle A \rangle_t = \langle A \rangle_0 \\) for all \\( t \\). Therefore
+That is, the initial expectation value of \\( A \\) differs from its thermal value. Since \\( A \\) is conserved, we have \\( \langle A \rangle\_t = \langle A \rangle\_0 \\) for all \\( t \\). Therefore
 
 \\[
 \langle A \rangle_t = \langle \psi(0) | A | \psi(0) \rangle \neq \text{tr}[\rho_{\text{th}} \, A] \qquad \text{for all } t.
@@ -78,13 +78,13 @@ The system **can never thermalize** with respect to the observable \\( A \\). Th
 
 For a generic system, the only integral of motion is the Hamiltonian itself (and functions of it), and the Gibbs ensemble already accounts for energy conservation through the temperature parameter \\( \beta \\). But systems with **many** integrals of motion -- such as integrable systems -- have far more constraints on their dynamics. The TFIM, as we discussed in Chapter 4, is integrable: it possesses extensively many independent conserved quantities. As a result, the TFIM does not thermalize to a Gibbs ensemble.
 
-What happens instead? The system reaches a **generalized Gibbs ensemble** (GGE). If \\( A_1, A_2, \ldots, A_k \\) are all the independent integrals of motion, the GGE is the density matrix
+What happens instead? The system reaches a **generalized Gibbs ensemble** (GGE). If \\( A\_1, A\_2, \ldots, A\_k \\) are all the independent integrals of motion, the GGE is the density matrix
 
 \\[
 \rho_{\text{GGE}} = \frac{1}{\mathcal{Z}_{\text{GGE}}} \exp\!\left( -\sum_{j=1}^{k} \lambda_j A_j \right),
 \\]
 
-where the Lagrange multipliers \\( \lambda_j \\) are fixed by requiring \\( \text{tr}[\rho_{\text{GGE}} \, A_j] = \langle \psi(0) | A_j | \psi(0) \rangle \\) for each \\( j \\). This is the most general "thermal-like" state that respects all the conservation laws. The ordinary Gibbs state is the special case where the only conserved quantity is the energy \\( H \\), and the single Lagrange multiplier is the inverse temperature \\( \beta \\).
+where the Lagrange multipliers \\( \lambda\_j \\) are fixed by requiring \\( \text{tr}[\rho\_{\text{GGE}} \, A\_j] = \langle \psi(0) | A\_j | \psi(0) \rangle \\) for each \\( j \\). This is the most general "thermal-like" state that respects all the conservation laws. The ordinary Gibbs state is the special case where the only conserved quantity is the energy \\( H \\), and the single Lagrange multiplier is the inverse temperature \\( \beta \\).
 
 ### 5.4 Prethermalization
 
@@ -106,14 +106,14 @@ The prethermal regime can be extremely long-lived when the system is close to in
 H_{\text{MFIM}} = -\sum_i Z_i Z_{i+1} - h_x \sum_i X_i - h_z \sum_i Z_i.
 \\]
 
-When the longitudinal field \\( h_z \\) is small, the MFIM is a weak perturbation of the TFIM. The TFIM is integrable and possesses extensively many exact IOMs (Chapter 4). When \\( h_z \\) is turned on, these IOMs are no longer exactly conserved, but they become **approximate** IOMs of the MFIM with \\( \|[H_{\text{MFIM}}, A]\| \sim h_z \\). The prethermal timescale is therefore \\( \tau \sim 1/h_z \\).
+When the longitudinal field \\( h\_z \\) is small, the MFIM is a weak perturbation of the TFIM. The TFIM is integrable and possesses extensively many exact IOMs (Chapter 4). When \\( h\_z \\) is turned on, these IOMs are no longer exactly conserved, but they become **approximate** IOMs of the MFIM with \\( \|[H\_{\text{MFIM}}, A]\| \sim h\_z \\). The prethermal timescale is therefore \\( \tau \sim 1/h\_z \\).
 
-Concretely: if you prepare the MFIM in some initial state and track local observables, you will first see them relax (on a timescale set by \\( 1/h_x \\)) to values that are *not* the thermal values, but rather the values predicted by a GGE built from the TFIM's conserved quantities. The system stays near this prethermal plateau for a time of order \\( 1/h_z \\), and only after this long time does it finally relax to the true Gibbs state.
+Concretely: if you prepare the MFIM in some initial state and track local observables, you will first see them relax (on a timescale set by \\( 1/h\_x \\)) to values that are *not* the thermal values, but rather the values predicted by a GGE built from the TFIM's conserved quantities. The system stays near this prethermal plateau for a time of order \\( 1/h\_z \\), and only after this long time does it finally relax to the true Gibbs state.
 
 This is a beautiful example of how the ideas from Chapters 3 and 4 -- integrals of motion, approximate conservation, and integrability -- have direct, observable consequences for the dynamics of quantum systems.
 
 ---
 
-**Summary.** The Gibbs state \\( \rho_{\text{th}} = e^{-\beta H}/\mathcal{Z} \\) is the quantum generalization of the Boltzmann distribution. Thermalization is the statement that local observables relax to their Gibbs state values under unitary evolution. Exact integrals of motion prevent full thermalization, because they pin certain expectation values to their initial (generically non-thermal) values; integrable systems instead relax to generalized Gibbs ensembles. Approximate integrals of motion lead to prethermalization: the system appears non-thermal on intermediate timescales before eventually reaching true thermal equilibrium. The MFIM, as a weakly broken integrable system, is a concrete example of prethermalization.
+**Summary.** The Gibbs state \\( \rho\_{\text{th}} = e^{-\beta H}/\mathcal{Z} \\) is the quantum generalization of the Boltzmann distribution. Thermalization is the statement that local observables relax to their Gibbs state values under unitary evolution. Exact integrals of motion prevent full thermalization, because they pin certain expectation values to their initial (generically non-thermal) values; integrable systems instead relax to generalized Gibbs ensembles. Approximate integrals of motion lead to prethermalization: the system appears non-thermal on intermediate timescales before eventually reaching true thermal equilibrium. The MFIM, as a weakly broken integrable system, is a concrete example of prethermalization.
 
 *Last modified: 2026-05-20*

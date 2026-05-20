@@ -31,7 +31,7 @@ The **Hamiltonian** (energy function) of the Ising model on a chain is
 
 Here \\( J \\) is a constant called the **coupling strength**, and the sum runs over all nearest-neighbor pairs along the chain. (We are using open boundary conditions here, so spin 1 is only coupled to spin 2, and spin \\( N \\) is only coupled to spin \\( N-1 \\).)
 
-The key observation is that the product \\( s_i \, s_{i+1} \\) equals \\( +1 \\) when the two spins are **aligned** (both up or both down) and \\( -1 \\) when they are **anti-aligned** (one up, one down). Because of the overall minus sign in \\( H = -J \sum s_i s_{i+1} \\):
+The key observation is that the product \\( s\_i \, s\_{i+1} \\) equals \\( +1 \\) when the two spins are **aligned** (both up or both down) and \\( -1 \\) when they are **anti-aligned** (one up, one down). Because of the overall minus sign in \\( H = -J \sum s\_i s\_{i+1} \\):
 
 - When \\( J > 0 \\): aligned pairs contribute \\( -J < 0 \\) to the energy (lowering it), while anti-aligned pairs contribute \\( +J > 0 \\) (raising it). The system **prefers alignment**. This is called a **ferromagnet**.
 - When \\( J < 0 \\): the situation is reversed. Anti-aligned pairs lower the energy. The system **prefers alternation** (up-down-up-down...). This is called an **antiferromagnet**.
@@ -44,7 +44,7 @@ Let us work out the energy of every configuration for \\( N = 3 \\) with \\( J >
 
 \\[ H = -J(s_1 s_2 + s_2 s_3). \\]
 
-| Configuration \\( (s_1, s_2, s_3) \\) | \\( s_1 s_2 \\) | \\( s_2 s_3 \\) | Energy \\( H \\) |
+| Configuration \\( (s\_1, s\_2, s\_3) \\) | \\( s\_1 s\_2 \\) | \\( s\_2 s\_3 \\) | Energy \\( H \\) |
 |---|---|---|---|
 | \\( (+1,+1,+1) \\) | \\( +1 \\) | \\( +1 \\) | \\( -2J \\) |
 | \\( (-1,-1,-1) \\) | \\( +1 \\) | \\( +1 \\) | \\( -2J \\) |
@@ -69,7 +69,7 @@ In practice, we might also apply an external magnetic field \\( h \\) that biase
 
 \\[ H = -J \sum_{i=1}^{N-1} s_i \, s_{i+1} \;-\; h \sum_{i=1}^{N} s_i. \\]
 
-The field term \\( -h \sum_i s_i \\) favors spins pointing up (\\( s_i = +1 \\)) when \\( h > 0 \\) and spins pointing down (\\( s_i = -1 \\)) when \\( h < 0 \\). For our 3-spin example with \\( h > 0 \\), the all-up state \\( (+1,+1,+1) \\) now has energy \\( -2J - 3h \\), while the all-down state \\( (-1,-1,-1) \\) has energy \\( -2J + 3h \\). The field breaks the symmetry between "all up" and "all down," selecting a unique ground state.
+The field term \\( -h \sum\_i s\_i \\) favors spins pointing up (\\( s\_i = +1 \\)) when \\( h > 0 \\) and spins pointing down (\\( s\_i = -1 \\)) when \\( h < 0 \\). For our 3-spin example with \\( h > 0 \\), the all-up state \\( (+1,+1,+1) \\) now has energy \\( -2J - 3h \\), while the all-down state \\( (-1,-1,-1) \\) has energy \\( -2J + 3h \\). The field breaks the symmetry between "all up" and "all down," selecting a unique ground state.
 
 ### 1.3 Statistical Mechanics and the Boltzmann Distribution
 
@@ -77,11 +77,11 @@ So far we have assigned an energy to each configuration. But which configuration
 
 #### The Boltzmann distribution
 
-At thermal equilibrium at temperature \\( T \\), the probability of finding the system in a configuration \\( \mathbf{s} = (s_1, \ldots, s_N) \\) is given by the **Boltzmann distribution**:
+At thermal equilibrium at temperature \\( T \\), the probability of finding the system in a configuration \\( \mathbf{s} = (s\_1, \ldots, s\_N) \\) is given by the **Boltzmann distribution**:
 
 \\[ p(\mathbf{s}) = \frac{1}{Z} \, e^{-\beta \, H(\mathbf{s})}, \\]
 
-where \\( \beta = 1/T \\) is the **inverse temperature** (we set the Boltzmann constant \\( k_B = 1 \\) for simplicity), and
+where \\( \beta = 1/T \\) is the **inverse temperature** (we set the Boltzmann constant \\( k\_B = 1 \\) for simplicity), and
 
 \\[ Z = \sum_{\text{all configurations } \mathbf{s}} e^{-\beta \, H(\mathbf{s})} \\]
 
@@ -128,12 +128,12 @@ The answer depends on the dimensionality of the lattice:
 
 - **1D Ising model** (a chain): There is **no phase transition** at any finite temperature. Any nonzero temperature introduces enough thermal fluctuations to destroy long-range order. The transition from order to disorder is smooth and gradual. (This can be proven exactly using the transfer matrix method, which we will encounter later.)
 
-- **2D Ising model** (a square grid): There **is** a sharp phase transition at a critical temperature \\( T_c \\). Below \\( T_c \\), the system is ordered (net magnetization); above \\( T_c \\), it is disordered. This was famously solved by Lars Onsager in 1944 and remains one of the landmark results in theoretical physics.
+- **2D Ising model** (a square grid): There **is** a sharp phase transition at a critical temperature \\( T\_c \\). Below \\( T\_c \\), the system is ordered (net magnetization); above \\( T\_c \\), it is disordered. This was famously solved by Lars Onsager in 1944 and remains one of the landmark results in theoretical physics.
 
 The existence or absence of phase transitions is one of the deepest questions in statistical mechanics, and understanding it will be a recurring theme as we move toward quantum models.
 
 ---
 
-**Summary.** The classical Ising model assigns a binary spin \\( s_i = \pm 1 \\) to each site of a lattice, with an energy function that rewards alignment (for \\( J > 0 \\)) between neighbors. At thermal equilibrium, the probability of each configuration is given by the Boltzmann distribution \\( p \propto e^{-\beta H} \\), where the inverse temperature \\( \beta \\) controls the tradeoff between energetic order and entropic disorder. In the next chapter, we will see how this classical picture is modified when we allow the spins to be quantum mechanical.
+**Summary.** The classical Ising model assigns a binary spin \\( s\_i = \pm 1 \\) to each site of a lattice, with an energy function that rewards alignment (for \\( J > 0 \\)) between neighbors. At thermal equilibrium, the probability of each configuration is given by the Boltzmann distribution \\( p \propto e^{-\beta H} \\), where the inverse temperature \\( \beta \\) controls the tradeoff between energetic order and entropic disorder. In the next chapter, we will see how this classical picture is modified when we allow the spins to be quantum mechanical.
 
 *Last modified: 2026-05-20*
