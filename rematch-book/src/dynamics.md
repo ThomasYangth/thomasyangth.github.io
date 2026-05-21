@@ -35,25 +35,25 @@ So far, the states evolve and the operators stay fixed. This is the **Schrodinge
 In the Heisenberg picture, we define the time-evolved operator
 
 \\[
-O(t) = e^{iHt} \, O \, e^{-iHt}.
+O(t) = e^{iHt} O e^{-iHt}.
 \\]
 
 The expectation value is the same in both pictures:
 
 \\[
-\langle \psi(t) | O | \psi(t) \rangle = \langle \psi(0) | \, e^{iHt} O \, e^{-iHt} | \psi(0) \rangle = \langle \psi(0) | O(t) | \psi(0) \rangle.
+\langle \psi(t) | O | \psi(t) \rangle = \langle \psi(0) | e^{iHt} O e^{-iHt} | \psi(0) \rangle = \langle \psi(0) | O(t) | \psi(0) \rangle.
 \\]
 
 **Equation of motion.** We can derive how \\( O(t) \\) changes by differentiating:
 
 \\[
-\frac{dO(t)}{dt} = \frac{d}{dt} \left( e^{iHt} O \, e^{-iHt} \right).
+\frac{dO(t)}{dt} = \frac{d}{dt} \left( e^{iHt} O e^{-iHt} \right).
 \\]
 
 Applying the product rule (and using \\( \frac{d}{dt} e^{iHt} = iH e^{iHt} \\), \\( \frac{d}{dt} e^{-iHt} = -i e^{-iHt} H \\)):
 
 \\[
-\frac{dO(t)}{dt} = iH e^{iHt} O \, e^{-iHt} + e^{iHt} O \, (-iH) e^{-iHt} = i \left( H O(t) - O(t) H \right).
+\frac{dO(t)}{dt} = iH e^{iHt} O e^{-iHt} + e^{iHt} O (-iH) e^{-iHt} = i \left( H O(t) - O(t) H \right).
 \\]
 
 This gives us the **Heisenberg equation of motion**:
@@ -77,7 +77,7 @@ Suppose we have an operator \\( A \\) that commutes with the Hamiltonian:
 What does the Heisenberg equation of motion tell us?
 
 \\[
-\frac{dA(t)}{dt} = i[H, A(t)] = i \, e^{iHt} [H, A] \, e^{-iHt} = 0.
+\frac{dA(t)}{dt} = i[H, A(t)] = i e^{iHt} [H, A] e^{-iHt} = 0.
 \\]
 
 (In the second step we used the fact that \\( [H, A] = 0 \\) implies \\( [H, A(t)] = e^{iHt}[H,A]e^{-iHt} = 0 \\); you should verify this as an exercise.) So \\( A(t) = A(0) = A \\) -- the operator does not change in time at all!
@@ -101,19 +101,19 @@ This is the quantum version of a conservation law. Let us summarize the logical 
 **Example: total magnetization in the Ising model.** Consider the \\( ZZ \\) interaction Hamiltonian on \\( n \\) sites (with no transverse field):
 
 \\[
-H_{ZZ} = -\sum_{i=1}^{n-1} Z_i Z_{i+1}.
+H\_{ZZ} = -\sum\_{i=1}^{n-1} Z\_i Z\_{i+1}.
 \\]
 
 Define the **total magnetization** operator
 
 \\[
-M = \sum_{i=1}^{n} Z_i.
+M = \sum\_{i=1}^{n} Z\_i.
 \\]
 
-Does \\( M \\) commute with \\( H\_{ZZ} \\)? We need to check \\( [Z\_i Z\_{i+1},\, Z\_j] \\) for each pair. Since \\( Z \\) matrices commute with each other (\\( [Z\_i, Z\_j] = 0 \\) for all \\( i, j \\)), we have
+Does \\( M \\) commute with \\( H\_{ZZ} \\)? We need to check \\( [Z\_i Z\_{i+1},  Z\_j] \\) for each pair. Since \\( Z \\) matrices commute with each other (\\( [Z\_i, Z\_j] = 0 \\) for all \\( i, j \\)), we have
 
 \\[
-[H_{ZZ}, M] = -\sum_{i,j} [Z_i Z_{i+1}, Z_j] = 0.
+[H\_{ZZ}, M] = -\sum\_{i,j} [Z\_i Z\_{i+1}, Z\_j] = 0.
 \\]
 
 So the total magnetization \\( M \\) is an integral of motion for \\( H\_{ZZ} \\). Physically, this means that if you prepare a state with a definite total magnetization (say, 3 spins up and 2 down), the \\( ZZ \\) interaction alone can never change that total.
@@ -121,13 +121,13 @@ So the total magnetization \\( M \\) is an integral of motion for \\( H\_{ZZ} \\
 **What about the transverse field?** Now add the transverse-field term to get the TFIM:
 
 \\[
-H_{\text{TFIM}} = -\sum_{i} Z_i Z_{i+1} - h \sum_{i} X_i.
+H\_{\text{TFIM}} = -\sum\_{i} Z\_i Z\_{i+1} - h \sum\_{i} X\_i.
 \\]
 
 Is \\( M = \sum\_i Z\_i \\) still conserved? We need to check \\( [X\_i, Z\_i] \\). Recall from Chapter 1 that the Pauli matrices satisfy \\( [X, Z] = -2iY \\). Therefore:
 
 \\[
-\left[ -h \sum_i X_i, \; \sum_j Z_j \right] = -h \sum_i [X_i, Z_i] = -h \sum_i (-2iY_i) = 2ih \sum_i Y_i \neq 0.
+\left[ -h \sum\_i X\_i, \sum\_j Z\_j \right] = -h \sum\_i [X\_i, Z\_i] = -h \sum\_i (-2iY\_i) = 2ih \sum\_i Y\_i \neq 0.
 \\]
 
 The transverse field **breaks** the conservation of total magnetization. Intuitively, the \\( X\_i \\) operator flips spin \\( i \\), so it changes the number of up-spins and down-spins. Once you turn on the transverse field, \\( \langle M \rangle \\) is no longer constant.

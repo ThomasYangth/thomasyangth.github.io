@@ -27,11 +27,11 @@ You can think of each configuration as a "microstate" of the magnet. The central
 
 The **Hamiltonian** (energy function) of the Ising model on a chain is
 
-\\[ H = -J \sum_{i=1}^{N-1} s_i \, s_{i+1}. \\]
+\\[ H = -J \sum_{i=1}^{N-1} s_i s_{i+1}. \\]
 
 Here \\( J \\) is a constant called the **coupling strength**, and the sum runs over all nearest-neighbor pairs along the chain. (We are using open boundary conditions here, so spin 1 is only coupled to spin 2, and spin \\( N \\) is only coupled to spin \\( N-1 \\).)
 
-The key observation is that the product \\( s\_i \, s\_{i+1} \\) equals \\( +1 \\) when the two spins are **aligned** (both up or both down) and \\( -1 \\) when they are **anti-aligned** (one up, one down). Because of the overall minus sign in \\( H = -J \sum s\_i s\_{i+1} \\):
+The key observation is that the product \\( s\_i s\_{i+1} \\) equals \\( +1 \\) when the two spins are **aligned** (both up or both down) and \\( -1 \\) when they are **anti-aligned** (one up, one down). Because of the overall minus sign in \\( H = -J \sum s\_i s\_{i+1} \\):
 
 - When \\( J > 0 \\): aligned pairs contribute \\( -J < 0 \\) to the energy (lowering it), while anti-aligned pairs contribute \\( +J > 0 \\) (raising it). The system **prefers alignment**. This is called a **ferromagnet**.
 - When \\( J < 0 \\): the situation is reversed. Anti-aligned pairs lower the energy. The system **prefers alternation** (up-down-up-down...). This is called an **antiferromagnet**.
@@ -67,7 +67,7 @@ This makes physical sense: a ferromagnet wants all its spins to point the same w
 
 In practice, we might also apply an external magnetic field \\( h \\) that biases the spins to point in one direction. This adds a term to the Hamiltonian:
 
-\\[ H = -J \sum_{i=1}^{N-1} s_i \, s_{i+1} \;-\; h \sum_{i=1}^{N} s_i. \\]
+\\[ H = -J \sum_{i=1}^{N-1} s_i s_{i+1}  -  h \sum_{i=1}^{N} s_i. \\]
 
 The field term \\( -h \sum\_i s\_i \\) favors spins pointing up (\\( s\_i = +1 \\)) when \\( h > 0 \\) and spins pointing down (\\( s\_i = -1 \\)) when \\( h < 0 \\). For our 3-spin example with \\( h > 0 \\), the all-up state \\( (+1,+1,+1) \\) now has energy \\( -2J - 3h \\), while the all-down state \\( (-1,-1,-1) \\) has energy \\( -2J + 3h \\). The field breaks the symmetry between "all up" and "all down," selecting a unique ground state.
 
@@ -79,11 +79,11 @@ So far we have assigned an energy to each configuration. But which configuration
 
 At thermal equilibrium at temperature \\( T \\), the probability of finding the system in a configuration \\( \mathbf{s} = (s\_1, \ldots, s\_N) \\) is given by the **Boltzmann distribution**:
 
-\\[ p(\mathbf{s}) = \frac{1}{Z} \, e^{-\beta \, H(\mathbf{s})}, \\]
+\\[ p(\mathbf{s}) = \frac{1}{Z} e^{-\beta H(\mathbf{s})}, \\]
 
 where \\( \beta = 1/T \\) is the **inverse temperature** (we set the Boltzmann constant \\( k\_B = 1 \\) for simplicity), and
 
-\\[ Z = \sum_{\text{all configurations } \mathbf{s}} e^{-\beta \, H(\mathbf{s})} \\]
+\\[ Z = \sum_{\text{all configurations } \mathbf{s}} e^{-\beta H(\mathbf{s})} \\]
 
 is the **partition function**, which serves as a normalization constant ensuring that probabilities sum to one.
 
@@ -116,9 +116,9 @@ Returning to our 3-spin chain with \\( h = 0 \\), let us compute the Boltzmann w
 
 The partition function is
 
-\\[ Z = 2\,e^{2\beta J} + 4 + 2\,e^{-2\beta J}. \\]
+\\[ Z = 2e^{2\beta J} + 4 + 2e^{-2\beta J}. \\]
 
-At low temperature (\\( \beta J \gg 1 \\)), the term \\( 2\,e^{2\beta J} \\) dominates, so the system is almost certainly in one of the two ground states. At high temperature (\\( \beta J \ll 1 \\)), all three exponentials are approximately 1, so \\( Z \approx 8 \\) and every configuration has probability \\( \approx 1/8 \\) -- complete randomness.
+At low temperature (\\( \beta J \gg 1 \\)), the term \\( 2 e^{2\beta J} \\) dominates, so the system is almost certainly in one of the two ground states. At high temperature (\\( \beta J \ll 1 \\)), all three exponentials are approximately 1, so \\( Z \approx 8 \\) and every configuration has probability \\( \approx 1/8 \\) -- complete randomness.
 
 #### A glimpse ahead: phase transitions
 

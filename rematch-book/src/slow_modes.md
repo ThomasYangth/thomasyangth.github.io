@@ -9,7 +9,7 @@ Recall from Chapter 3 that an integral of motion satisfies \\( [H, A] = 0 \\), s
 **Slowness.** Given an operator \\( A \\), we define its **timescale** as
 
 \\[
-\tau_A = \frac{\|A\|}{\|[H, A]\|}.
+\tau\_A = \frac{\|A\|}{\|[H, A]\|}.
 \\]
 
 This has a natural interpretation: since \\( dA(t)/dt = i[H, A(t)] \\), the ratio \\( \|A\| / \|[H,A]\| \\) estimates how long it takes for \\( A(t) \\) to change appreciably relative to its own size. A large \\( \tau\_A \\) means \\( A \\) evolves slowly. An exact IOM has \\( \tau\_A = \infty \\).
@@ -29,7 +29,7 @@ One concrete way to identify slow modes is to couple the system weakly to an env
 **The setup.** We add weak **depolarizing noise** to the system. Each qubit independently experiences random Pauli kicks at a small rate \\( \gamma \\). In the Heisenberg picture, the time evolution of an operator \\( O \\) is governed by the **Lindblad master equation**:
 
 \\[
-\frac{dO}{dt} = \mathcal{L}^\dagger[O] = i[H, O] + \sum_j \frac{\gamma}{4} \left( L_j^\dagger O L_j - \frac{1}{2}\{L_j^\dagger L_j, O\} \right),
+\frac{dO}{dt} = \mathcal{L}^\dagger[O] = i[H, O] + \sum\_j \frac{\gamma}{4} \left( L\_j^\dagger O L\_j - \frac{1}{2}\{L\_j^\dagger L\_j, O\} \right),
 \\]
 
 where the sum runs over all sites \\( j \\) and over jump operators \\( L\_j \in \{X\_j, Y\_j, Z\_j\} \\). The superoperator \\( \mathcal{L}^\dagger \\) is called the **adjoint Lindbladian**. The first term, \\( i[H, O] \\), is the usual unitary (Hamiltonian) evolution. The remaining terms describe the effect of the noise.
@@ -37,7 +37,7 @@ where the sum runs over all sites \\( j \\) and over jump operators \\( L\_j \in
 **Why depolarizing noise?** This particular choice of noise has a beautiful property. Consider expanding any operator \\( O \\) in the Pauli basis:
 
 \\[
-O = \sum_P c_P \, P,
+O = \sum\_P c\_P P,
 \\]
 
 where \\( P \\) ranges over all \\( n \\)-qubit Pauli strings (products of \\( I, X, Y, Z \\) on each site). Define the **size** of a Pauli string \\( P \\), written \\( S(P) \\), as the number of sites where \\( P \\) acts nontrivially (i.e., is not the identity). For example, \\( S(X\_1 Z\_3) = 2 \\) on a 5-site chain.
@@ -45,7 +45,7 @@ where \\( P \\) ranges over all \\( n \\)-qubit Pauli strings (products of \\( I
 Under depolarizing noise *alone* (setting \\( H = 0 \\)), each Pauli string \\( P \\) decays independently at a rate proportional to its size:
 
 \\[
-P(t) = e^{-\gamma \, S(P) \, t} \, P.
+P(t) = e^{-\gamma S(P) t} P.
 \\]
 
 This means that operators with small support (low size) decay slowly, while operators with large support decay quickly. The noise acts as a *filter*: it washes away the complicated, nonlocal parts of an operator while preserving the simple parts.
@@ -60,7 +60,7 @@ Therefore, the **slowly decaying modes** of the Lindbladian are precisely the op
 **Diagonalizing the Lindbladian.** Since \\( \mathcal{L}^\dagger \\) is a superoperator (a linear map on the space of operators), we can look for its eigenoperators:
 
 \\[
-\mathcal{L}^\dagger[O_k] = \lambda_k \, O_k.
+\mathcal{L}^\dagger[O\_k] = \lambda\_k O\_k.
 \\]
 
 The eigenvalues \\( \lambda\_k \\) are generally complex, with \\( \text{Re}(\lambda\_k) \leq 0 \\) (operators can only decay, not grow). The eigenoperators with the *least negative* real parts -- those closest to zero -- are the **slow modes**. They are the operators that survive the longest under the combined Hamiltonian-plus-noise dynamics.
@@ -76,7 +76,7 @@ The Lindbladian approach identifies slow modes by coupling to an environment. An
 For the ensemble of **random product states** (RPS), each qubit is independently in a uniformly random pure state. The **ensemble variance norm** is defined as
 
 \\[
-\|A\|_{\text{RPS}}^2 = \text{Var}_{\mathcal{E}}\!\left[\langle \psi | A | \psi \rangle\right],
+\|A\|\_{\text{RPS}}^2 = \text{Var}\_{\mathcal{E}}\!\left[\langle \psi | A | \psi \rangle\right],
 \\]
 
 the variance of the expectation value of \\( A \\) over random product states \\( |\psi\rangle \\). If \\( A \\) is a simple, local operator, different product states will give noticeably different expectation values, so the variance is large. If \\( A \\) is a complicated many-body operator, its expectation value is nearly the same for every product state (it "self-averages"), so the variance is tiny.
@@ -84,7 +84,7 @@ the variance of the expectation value of \\( A \\) over random product states \\
 There is a beautiful formula for this norm in the Pauli basis. Expand \\( A = \sum\_P c\_P P \\) where \\( P \\) are Pauli strings. Then
 
 \\[
-\|A\|_{\text{RPS}}^2 = \sum_P |c_P|^2 \, 3^{-|P|},
+\|A\|\_{\text{RPS}}^2 = \sum\_P |c\_P|^2 3^{-|P|},
 \\]
 
 where \\( |P| \\) denotes the weight of the Pauli string \\( P \\) (the number of non-identity factors). Notice the factor \\( 3^{-|P|} \\): Pauli strings with larger weight are exponentially suppressed. This is exactly the quantification of simplicity we want -- the norm is dominated by contributions from low-weight (simple) Pauli strings.
@@ -94,7 +94,7 @@ We can write this more abstractly as \\( \|A\|\_{\text{RPS}}^2 = \langle A, \mat
 **The \\( \nu \\)-\\( \tau \\) plane.** Every traceless operator \\( A \\) (normalized so that \\( \|A\| = 1 \\) in the Hilbert-Schmidt norm) maps to a point in the **\\( \nu \\)-\\( \tau \\) plane**:
 
 \\[
-\tau_A = \frac{1}{\|[H, A]\|}, \qquad \nu_A = \|A\|_{\mathcal{E}}^2.
+\tau\_A = \frac{1}{\|[H, A]\|}, \qquad \nu\_A = \|A\|\_{\mathcal{E}}^2.
 \\]
 
 Here \\( \tau\_A \\) measures slowness (large \\( \tau \\) means slow) and \\( \nu\_A \\) measures simplicity (large \\( \nu \\) means simple). An operator that is both slow and simple sits in the **upper-right** corner of this plane.
@@ -102,7 +102,7 @@ Here \\( \tau\_A \\) measures slowness (large \\( \tau \\) means slow) and \\( \
 The **upper envelope** \\( \nu(\tau) \\) is defined as
 
 \\[
-\nu(\tau) = \max_{\substack{A:\, \|A\|=1 \\ \tau_A \geq \tau}} \nu_A.
+\nu(\tau) = \max\_{\substack{A: \|A\|=1 \\ \tau\_A \geq \tau}} \nu\_A.
 \\]
 
 It answers the question: among all operators that are at least as slow as \\( \tau \\), what is the maximum simplicity? The shape of \\( \nu(\tau) \\) encodes the system's thermalization properties.
@@ -114,7 +114,7 @@ Conversely, if \\( \nu(\tau) \\) remains large out to long timescales (meaning S
 **The eigenvalue problem.** To find the operators that maximize \\( \nu\_A \\) subject to a constraint on \\( \tau\_A \\), we use a Lagrange multiplier. This leads to the **generalized eigenvalue problem**
 
 \\[
-\mathcal{M}_{\mathcal{E}}[A] + \theta \, (\text{ad}_H)^2 [A] = \mu \, A,
+\mathcal{M}\_{\mathcal{E}}[A] + \theta (\text{ad}\_H)^2 [A] = \mu A,
 \\]
 
 where \\( (\text{ad}\_H)^2[A] = [H, [H, A]] \\) is the double commutator with \\( H \\), and \\( \theta \geq 0 \\) is a parameter that controls the tradeoff between simplicity and slowness. Varying \\( \theta \\) from 0 to \\( \infty \\) traces out the upper envelope \\( \nu(\tau) \\).
@@ -128,7 +128,7 @@ Both approaches above reduce to **superoperator eigenvalue problems** that can b
 **Step 1: Build the Hamiltonian.** For the mixed-field Ising model on \\( n \\) sites,
 
 \\[
-H = -\sum_{i=1}^{n-1} Z_i Z_{i+1} - h_x \sum_{i=1}^n X_i - h_z \sum_{i=1}^n Z_i,
+H = -\sum\_{i=1}^{n-1} Z\_i Z\_{i+1} - h\_x \sum\_{i=1}^n X\_i - h\_z \sum\_{i=1}^n Z\_i,
 \\]
 
 construct \\( H \\) as a \\( 2^n \times 2^n \\) matrix. You can use [QuSpin](https://quspin.github.io/QuSpin/) to build spin chain Hamiltonians, or construct it directly using Kronecker products in NumPy. For \\( n \\) up to about 10--12, the matrices fit in memory.

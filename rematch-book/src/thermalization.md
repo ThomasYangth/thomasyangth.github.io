@@ -7,13 +7,13 @@ In the previous chapters, we built up the tools needed to ask one of the deepest
 In Chapter 1, we introduced the Boltzmann distribution: a classical system in thermal equilibrium at inverse temperature \\( \beta \\) occupies configuration \\( \mathbf{s} \\) with probability
 
 \\[
-p(\mathbf{s}) = \frac{e^{-\beta H(\mathbf{s})}}{Z}, \qquad Z = \sum_{\mathbf{s}} e^{-\beta H(\mathbf{s})}.
+p(\mathbf{s}) = \frac{e^{-\beta H(\mathbf{s})}}{Z}, \qquad Z = \sum\_{\mathbf{s}} e^{-\beta H(\mathbf{s})}.
 \\]
 
 How do we generalize this to quantum mechanics? In a quantum system, the Hamiltonian \\( H \\) is a matrix (an operator on Hilbert space), not just a function on configurations. The natural generalization is a **density matrix** rather than a probability distribution. The quantum thermal state, called the **Gibbs state**, is
 
 \\[
-\boxed{\rho_{\text{th}} = \frac{e^{-\beta H}}{\text{tr}[e^{-\beta H}]}.}
+\boxed{\rho\_{\text{th}} = \frac{e^{-\beta H}}{\text{tr}[e^{-\beta H}]}.}
 \\]
 
 Here \\( e^{-\beta H} \\) is the matrix exponential of \\( -\beta H \\) (see Appendix A), and the denominator \\( \mathcal{Z} = \text{tr}[e^{-\beta H}] \\) is the **partition function**, ensuring that \\( \text{tr}[\rho\_{\text{th}}] = 1 \\).
@@ -21,13 +21,13 @@ Here \\( e^{-\beta H} \\) is the matrix exponential of \\( -\beta H \\) (see App
 **Why is this the right generalization?** Let \\( H \\) have energy eigenstates \\( |n\rangle \\) with eigenvalues \\( E\_n \\), so that \\( H|n\rangle = E\_n |n\rangle \\). Then
 
 \\[
-e^{-\beta H} = \sum_n e^{-\beta E_n} |n\rangle\langle n|,
+e^{-\beta H} = \sum\_n e^{-\beta E\_n} |n\rangle\langle n|,
 \\]
 
 and therefore
 
 \\[
-\rho_{\text{th}} = \sum_n \frac{e^{-\beta E_n}}{\mathcal{Z}} |n\rangle\langle n|, \qquad \mathcal{Z} = \sum_n e^{-\beta E_n}.
+\rho\_{\text{th}} = \sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} |n\rangle\langle n|, \qquad \mathcal{Z} = \sum\_n e^{-\beta E\_n}.
 \\]
 
 In the energy eigenbasis, the Gibbs state is **diagonal**, with the \\( n \\)-th diagonal entry equal to \\( e^{-\beta E\_n}/\mathcal{Z} \\). This is exactly the Boltzmann distribution -- each energy level \\( E\_n \\) is occupied with probability proportional to \\( e^{-\beta E\_n} \\). For a classical Hamiltonian (one that is diagonal in the computational basis), the Gibbs state reduces precisely to the classical Boltzmann distribution from Chapter 1.
@@ -35,10 +35,10 @@ In the energy eigenbasis, the Gibbs state is **diagonal**, with the \\( n \\)-th
 The thermal expectation value of any observable \\( O \\) is computed as
 
 \\[
-\langle O \rangle_{\text{th}} = \text{tr}[\rho_{\text{th}} \, O].
+\langle O \rangle\_{\text{th}} = \text{tr}[\rho\_{\text{th}} O].
 \\]
 
-This is the quantum generalization of the classical formula \\( \langle O \rangle = \sum\_{\mathbf{s}} p(\mathbf{s}) \, O(\mathbf{s}) \\).
+This is the quantum generalization of the classical formula \\( \langle O \rangle = \sum\_{\mathbf{s}} p(\mathbf{s}) O(\mathbf{s}) \\).
 
 ### 5.2 Thermalization
 
@@ -51,7 +51,7 @@ In quantum mechanics, the dynamics are unitary: starting from some initial state
 The answer is subtle and important. We do not expect the full quantum state to become \\( \rho\_{\text{th}} \\). Instead, **thermalization** is a statement about **local observables**: if \\( O \\) is an observable that acts on a small subsystem (for example, a few neighboring spins), then we say the system thermalizes if
 
 \\[
-\langle \psi(t) | O | \psi(t) \rangle \;\longrightarrow\; \text{tr}[\rho_{\text{th}} \, O] \qquad \text{as } t \to \infty,
+\langle \psi(t) | O | \psi(t) \rangle  \longrightarrow  \text{tr}[\rho\_{\text{th}} O] \qquad \text{as } t \to \infty,
 \\]
 
 where the arrow means the expectation value approaches, and then fluctuates close to, the thermal value. The idea is that a small subsystem cannot tell whether it is part of a pure state or a thermal mixture -- the rest of the system acts as an effective heat bath.
@@ -65,13 +65,13 @@ In Chapter 3, we established a clean logical chain: if \\( [H, A] = 0 \\), then 
 Suppose \\( A \\) is an integral of motion, and we prepare an initial state \\( |\psi(0)\rangle \\) such that
 
 \\[
-\langle \psi(0) | A | \psi(0) \rangle \neq \text{tr}[\rho_{\text{th}} \, A].
+\langle \psi(0) | A | \psi(0) \rangle \neq \text{tr}[\rho\_{\text{th}} A].
 \\]
 
 That is, the initial expectation value of \\( A \\) differs from its thermal value. Since \\( A \\) is conserved, we have \\( \langle A \rangle\_t = \langle A \rangle\_0 \\) for all \\( t \\). Therefore
 
 \\[
-\langle A \rangle_t = \langle \psi(0) | A | \psi(0) \rangle \neq \text{tr}[\rho_{\text{th}} \, A] \qquad \text{for all } t.
+\langle A \rangle\_t = \langle \psi(0) | A | \psi(0) \rangle \neq \text{tr}[\rho\_{\text{th}} A] \qquad \text{for all } t.
 \\]
 
 The system **can never thermalize** with respect to the observable \\( A \\). The conserved quantity "remembers" its initial value forever and prevents the system from reaching the Gibbs state.
@@ -81,10 +81,10 @@ For a generic system, the only integral of motion is the Hamiltonian itself (and
 What happens instead? The system reaches a **generalized Gibbs ensemble** (GGE). If \\( A\_1, A\_2, \ldots, A\_k \\) are all the independent integrals of motion, the GGE is the density matrix
 
 \\[
-\rho_{\text{GGE}} = \frac{1}{\mathcal{Z}_{\text{GGE}}} \exp\!\left( -\sum_{j=1}^{k} \lambda_j A_j \right),
+\rho\_{\text{GGE}} = \frac{1}{\mathcal{Z}\_{\text{GGE}}} \exp\!\left( -\sum\_{j=1}^{k} \lambda\_j A\_j \right),
 \\]
 
-where the Lagrange multipliers \\( \lambda\_j \\) are fixed by requiring \\( \text{tr}[\rho\_{\text{GGE}} \, A\_j] = \langle \psi(0) | A\_j | \psi(0) \rangle \\) for each \\( j \\). This is the most general "thermal-like" state that respects all the conservation laws. The ordinary Gibbs state is the special case where the only conserved quantity is the energy \\( H \\), and the single Lagrange multiplier is the inverse temperature \\( \beta \\).
+where the Lagrange multipliers \\( \lambda\_j \\) are fixed by requiring \\( \text{tr}[\rho\_{\text{GGE}} A\_j] = \langle \psi(0) | A\_j | \psi(0) \rangle \\) for each \\( j \\). This is the most general "thermal-like" state that respects all the conservation laws. The ordinary Gibbs state is the special case where the only conserved quantity is the energy \\( H \\), and the single Lagrange multiplier is the inverse temperature \\( \beta \\).
 
 ### 5.4 Prethermalization
 
@@ -103,7 +103,7 @@ The prethermal regime can be extremely long-lived when the system is close to in
 **The MFIM as an example.** This is precisely what happens in the mixed-field Ising model
 
 \\[
-H_{\text{MFIM}} = -\sum_i Z_i Z_{i+1} - h_x \sum_i X_i - h_z \sum_i Z_i.
+H\_{\text{MFIM}} = -\sum\_i Z\_i Z\_{i+1} - h\_x \sum\_i X\_i - h\_z \sum\_i Z\_i.
 \\]
 
 When the longitudinal field \\( h\_z \\) is small, the MFIM is a weak perturbation of the TFIM. The TFIM is integrable and possesses extensively many exact IOMs (Chapter 4). When \\( h\_z \\) is turned on, these IOMs are no longer exactly conserved, but they become **approximate** IOMs of the MFIM with \\( \|[H\_{\text{MFIM}}, A]\| \sim h\_z \\). The prethermal timescale is therefore \\( \tau \sim 1/h\_z \\).

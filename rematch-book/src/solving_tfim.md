@@ -5,7 +5,7 @@ In Chapter 2, we claimed that the transverse-field Ising model (TFIM) is exactly
 Recall the TFIM Hamiltonian (with open boundary conditions on \\( L \\) sites):
 
 \\[
-H_{\text{TFIM}} = \sum_{i=1}^{L-1} J \, Z_i Z_{i+1} + h \sum_{i=1}^{L} X_i.
+H\_{\text{TFIM}} = \sum\_{i=1}^{L-1} J Z\_i Z\_{i+1} + h \sum\_{i=1}^{L} X\_i.
 \\]
 
 ### 4.1 Integrability and the Jordan-Wigner Transformation
@@ -18,13 +18,13 @@ The key insight, due to Jordan and Wigner (1928), is that spin-\\( 1/2 \\) opera
 Concretely, we define fermionic operators \\( c\_j \\) and \\( c\_j^\dagger \\) at each site \\( j \\) through the mapping:
 
 \\[
-c_j = \left( \prod_{k=1}^{j-1} X_k \right) \frac{Z_j + i Y_j}{2}, \qquad c_j^\dagger = \left( \prod_{k=1}^{j-1} X_k \right) \frac{Z_j - i Y_j}{2}.
+c\_j = \left( \prod\_{k=1}^{j-1} X\_k \right) \frac{Z\_j + i Y\_j}{2}, \qquad c\_j^\dagger = \left( \prod\_{k=1}^{j-1} X\_k \right) \frac{Z\_j - i Y\_j}{2}.
 \\]
 
 The string of \\( X \\) operators \\( \prod\_{k=1}^{j-1} X\_k \\) is called the **Jordan-Wigner string**. It is the crucial ingredient that ensures the operators \\( c\_j \\) satisfy the correct fermionic anti-commutation relations:
 
 \\[
-\\{c_i, c_j^\dagger\\} = \delta_{ij}, \qquad \\{c_i, c_j\\} = 0,
+\\{c\_i, c\_j^\dagger\\} = \delta\_{ij}, \qquad \\{c\_i, c\_j\\} = 0,
 \\]
 
 where \\( \\{A, B\\} = AB + BA \\) is the anti-commutator. Without the string, the operators at different sites would commute (like bosons) rather than anti-commute (like fermions). You can verify this if you like using the Pauli algebra, though we will not go through the calculation here.
@@ -32,7 +32,7 @@ where \\( \\{A, B\\} = AB + BA \\) is the anti-commutator. Without the string, t
 It is also useful to introduce **Majorana fermion** operators, which are the real and imaginary parts of \\( c\_j \\):
 
 \\[
-\gamma_{2j-1} = c_j + c_j^\dagger, \qquad \gamma_{2j} = i(c_j - c_j^\dagger).
+\gamma\_{2j-1} = c\_j + c\_j^\dagger, \qquad \gamma\_{2j} = i(c\_j - c\_j^\dagger).
 \\]
 
 Majorana operators are Hermitian (\\( \gamma\_k^\dagger = \gamma\_k \\)) and satisfy \\( \\{\gamma\_k, \gamma\_l\\} = 2\delta\_{kl} \\). They will be the natural language for writing down the conserved quantities of the TFIM.
@@ -40,7 +40,7 @@ Majorana operators are Hermitian (\\( \gamma\_k^\dagger = \gamma\_k \\)) and sat
 **Why does this help?** The miracle is that when you express the TFIM Hamiltonian in terms of these fermionic operators, the \\( ZZ \\) interaction and the \\( X \\) field both become **quadratic** (bilinear) in the fermions -- they involve only terms like \\( c\_i^\dagger c\_j \\) or \\( c\_i c\_j \\), with at most two fermionic operators per term. Schematically:
 
 \\[
-H_{\text{TFIM}} = \sum_{i,j} \left( A_{ij} \, c_i^\dagger c_j + B_{ij} \, c_i^\dagger c_j^\dagger + \text{h.c.} \right) + \text{const}.
+H\_{\text{TFIM}} = \sum\_{i,j} \left( A\_{ij} c\_i^\dagger c\_j + B\_{ij} c\_i^\dagger c\_j^\dagger + \text{h.c.} \right) + \text{const}.
 \\]
 
 A Hamiltonian that is quadratic in fermions describes **non-interacting** (free) fermions. This is the key to exact solvability.
@@ -49,7 +49,7 @@ A Hamiltonian that is quadratic in fermions describes **non-interacting** (free)
 For a translationally invariant system (e.g., with periodic boundary conditions), one performs a Fourier transform to momentum space:
 
 \\[
-\tilde{c}_k = \frac{1}{\sqrt{L}} \sum_{j=1}^{L} e^{-ikj} c_j.
+\tilde{c}\_k = \frac{1}{\sqrt{L}} \sum\_{j=1}^{L} e^{-ikj} c\_j.
 \\]
 
 In momentum space, the Hamiltonian decomposes into independent \\( 2 \times 2 \\) blocks, one for each momentum \\( k \\). Each block couples only \\( \tilde{c}\_k \\) and \\( \tilde{c}\_{-k}^\dagger \\).
@@ -58,13 +58,13 @@ In momentum space, the Hamiltonian decomposes into independent \\( 2 \times 2 \\
 Each \\( 2 \times 2 \\) block is diagonalized by a Bogoliubov transformation -- a canonical change of variables that mixes \\( \tilde{c}\_k \\) and \\( \tilde{c}\_{-k}^\dagger \\) while preserving the fermionic anti-commutation relations. The result is a set of new fermionic operators \\( \eta\_k \\) in terms of which the Hamiltonian takes the diagonal form:
 
 \\[
-H_{\text{TFIM}} = \sum_k \varepsilon_k \left( \eta_k^\dagger \eta_k - \frac{1}{2} \right),
+H\_{\text{TFIM}} = \sum\_k \varepsilon\_k \left( \eta\_k^\dagger \eta\_k - \frac{1}{2} \right),
 \\]
 
 where the single-particle energies are
 
 \\[
-\varepsilon_k = \sqrt{(J \cos k + h)^2 + (J \sin k)^2}.
+\varepsilon\_k = \sqrt{(J \cos k + h)^2 + (J \sin k)^2}.
 \\]
 
 This is the final answer. The Hamiltonian describes \\( L \\) independent fermionic modes, each with its own energy \\( \varepsilon\_k \\). The many-body eigenstates are obtained by choosing which modes to occupy (\\( \eta\_k^\dagger \eta\_k = 0 \\) or \\( 1 \\)), giving \\( 2^L \\) eigenstates in total -- exactly the dimension of the Hilbert space. The ground state is the "vacuum" with all negative-energy modes filled.
@@ -72,14 +72,14 @@ This is the final answer. The Hamiltonian describes \\( L \\) independent fermio
 **Summary of the procedure:**
 
 \\[
-\text{Spins} \;\xrightarrow{\text{Jordan-Wigner}}\; \text{Fermions (quadratic)} \;\xrightarrow{\text{Fourier}}\; \text{Momentum space} \;\xrightarrow{\text{Bogoliubov}}\; \text{Free modes } \eta_k.
+\text{Spins}  \xrightarrow{\text{Jordan-Wigner}}  \text{Fermions (quadratic)}  \xrightarrow{\text{Fourier}}  \text{Momentum space}  \xrightarrow{\text{Bogoliubov}}  \text{Free modes } \eta\_k.
 \\]
 
 The essential point is not the algebra of each step, but the logical flow: the Jordan-Wigner transformation reveals that the TFIM is secretly a free-fermion problem, and free-fermion problems reduce to single-particle quantum mechanics.
 
 ### 4.2 Conserved Quantities of the TFIM
 
-Since the TFIM is integrable, it must possess a full set of \\( L \\) independent, mutually commuting integrals of motion. In the diagonal form \\( H = \sum\_k \varepsilon\_k \, \eta\_k^\dagger \eta\_k + \text{const} \\), these are easy to identify: they are the **occupation numbers** \\( n\_k = \eta\_k^\dagger \eta\_k \\) for each mode \\( k \\). Each \\( n\_k \\) commutes with \\( H \\) (since \\( H \\) is diagonal in the \\( \eta\_k \\) basis) and with every other \\( n\_{k'} \\), and each takes values 0 or 1.
+Since the TFIM is integrable, it must possess a full set of \\( L \\) independent, mutually commuting integrals of motion. In the diagonal form \\( H = \sum\_k \varepsilon\_k \eta\_k^\dagger \eta\_k + \text{const} \\), these are easy to identify: they are the **occupation numbers** \\( n\_k = \eta\_k^\dagger \eta\_k \\) for each mode \\( k \\). Each \\( n\_k \\) commutes with \\( H \\) (since \\( H \\) is diagonal in the \\( \eta\_k \\) basis) and with every other \\( n\_{k'} \\), and each takes values 0 or 1.
 
 But these occupation-number operators are defined in momentum space. What do the conserved quantities look like when expressed back in terms of the original spin operators? This is important because in the MFIM (where exact diagonalization is not possible), we want to search for *approximate* conserved quantities written as sums of Pauli strings, and we need to know what the exact ones look like for comparison.
 
@@ -88,13 +88,13 @@ It turns out that the conserved quantities of the TFIM can be written as **Major
 **The \\( A\_m \\) family.** These are the simpler ones:
 
 \\[
-A_m = \sum_i \left( Y_i X_{i+1} X_{i+2} \cdots X_{i+m-1} Z_{i+m} - Z_i X_{i+1} X_{i+2} \cdots X_{i+m-1} Y_{i+m} \right).
+A\_m = \sum\_i \left( Y\_i X\_{i+1} X\_{i+2} \cdots X\_{i+m-1} Z\_{i+m} - Z\_i X\_{i+1} X\_{i+2} \cdots X\_{i+m-1} Y\_{i+m} \right).
 \\]
 
 In compact notation, we write this as
 
 \\[
-A_m = Y X^{m-1} Z - Z X^{m-1} Y,
+A\_m = Y X^{m-1} Z - Z X^{m-1} Y,
 \\]
 
 where the shorthand \\( Y X^{m-1} Z \\) means a Pauli string that starts with \\( Y \\), has \\( m-1 \\) copies of \\( X \\) in the middle, and ends with \\( Z \\), summed over all starting positions \\( i \\).
@@ -110,25 +110,25 @@ Each \\( A\_m \\) has range \\( m+1 \\) (it acts nontrivially on \\( m+1 \\) con
 **The \\( B\_m \\) family.** These are slightly more involved because they depend on the Hamiltonian parameters \\( J \\) and \\( h \\). For \\( m \geq 2 \\):
 
 \\[
-B_m = J \sum_i Z_i X_{i+1} \cdots X_{i+m-1} Z_{i+m} - h \sum_i Z_i X_{i+1} \cdots X_{i+m-2} Z_{i+m-1} - h \sum_i Y_i X_{i+1} \cdots X_{i+m-2} Y_{i+m-1},
+B\_m = J \sum\_i Z\_i X\_{i+1} \cdots X\_{i+m-1} Z\_{i+m} - h \sum\_i Z\_i X\_{i+1} \cdots X\_{i+m-2} Z\_{i+m-1} - h \sum\_i Y\_i X\_{i+1} \cdots X\_{i+m-2} Y\_{i+m-1},
 \\]
 
 or in compact notation:
 
 \\[
-B_m = J \, Z X^{m-1} Z - h \, Z X^{m-2} Z - h \, Y X^{m-2} Y \qquad (m \geq 2).
+B\_m = J Z X^{m-1} Z - h Z X^{m-2} Z - h Y X^{m-2} Y \qquad (m \geq 2).
 \\]
 
 The first member of this family is special:
 
 \\[
-B_1 = J \sum_i Z_i X_{i+1} Z_{i+2} - h \sum_i Z_i Z_{i+1} - h \sum_i Y_i Y_{i+1} - J \sum_i X_i,
+B\_1 = J \sum\_i Z\_i X\_{i+1} Z\_{i+2} - h \sum\_i Z\_i Z\_{i+1} - h \sum\_i Y\_i Y\_{i+1} - J \sum\_i X\_i,
 \\]
 
 or compactly:
 
 \\[
-B_1 = J \, ZXZ - h \, ZZ - h \, YY - J \, X.
+B\_1 = J ZXZ - h ZZ - h YY - J X.
 \\]
 
 Note that \\( B\_1 \\) contains a single-site term (\\( X\_i \\)) as well as two-site and three-site terms.
@@ -136,7 +136,7 @@ Note that \\( B\_1 \\) contains a single-site term (\\( X\_i \\)) as well as two
 **Physical interpretation.** Each of these operators commutes exactly with \\( H\_{\text{TFIM}} \\):
 
 \\[
-[H_{\text{TFIM}}, A_m] = 0, \qquad [H_{\text{TFIM}}, B_m] = 0 \qquad \text{for all } m.
+[H\_{\text{TFIM}}, A\_m] = 0, \qquad [H\_{\text{TFIM}}, B\_m] = 0 \qquad \text{for all } m.
 \\]
 
 They also commute with each other: \\( [A\_m, A\_{m'}] = [B\_m, B\_{m'}] = [A\_m, B\_{m'}] = 0 \\). Together, the \\( A\_m \\) and \\( B\_m \\) operators provide the full set of conserved quantities needed for integrability. (In fact, \\( B\_1 \\) is proportional to \\( H\_{\text{TFIM}} \\) itself, so energy conservation is included as a special case.)
@@ -148,7 +148,7 @@ Since these operators are all conserved, their expectation values are frozen for
 Now consider the mixed-field Ising model:
 
 \\[
-H_{\text{MFIM}} = \sum_i J \, Z_i Z_{i+1} + h_x \sum_i X_i + h_z \sum_i Z_i.
+H\_{\text{MFIM}} = \sum\_i J Z\_i Z\_{i+1} + h\_x \sum\_i X\_i + h\_z \sum\_i Z\_i.
 \\]
 
 This differs from the TFIM only by the longitudinal field \\( h\_z \sum\_i Z\_i \\). What happens when we apply the Jordan-Wigner transformation to this extra term?
@@ -156,7 +156,7 @@ This differs from the TFIM only by the longitudinal field \\( h\_z \sum\_i Z\_i 
 **The longitudinal field becomes quartic.** Recall that the Jordan-Wigner transformation expresses each Pauli operator in terms of fermions. The operators \\( Z\_i Z\_{i+1} \\) and \\( X\_i \\) both map to quadratic (bilinear) expressions in the fermions \\( c\_j, c\_j^\dagger \\). But the single-site operator \\( Z\_i \\) maps to:
 
 \\[
-Z_i = 1 - 2 c_i^\dagger c_i.
+Z\_i = 1 - 2 c\_i^\dagger c\_i.
 \\]
 
 At first glance, this also looks quadratic, and indeed it is. But the subtlety is in how it combines with the other terms. When you write out the full MFIM Hamiltonian in fermion language, the \\( h\_z Z\_i \\) term can be absorbed into the quadratic part, but the presence of *both* \\( ZZ \\) and \\( Z \\) terms together with the transverse field \\( X \\) produces an effective Hamiltonian that, after the Jordan-Wigner transformation, contains **quartic** (four-fermion) terms of the form \\( c\_i^\dagger c\_i c\_j^\dagger c\_j \\).
@@ -170,7 +170,7 @@ To see this from a slightly different angle: in the TFIM, the Hamiltonian can be
 **Consequences for integrability.** When the quartic interactions are present, the occupation numbers \\( n\_k = \eta\_k^\dagger \eta\_k \\) of the free-fermion modes are no longer conserved:
 
 \\[
-[H_{\text{MFIM}}, \eta_k^\dagger \eta_k] \neq 0.
+[H\_{\text{MFIM}}, \eta\_k^\dagger \eta\_k] \neq 0.
 \\]
 
 The Bogoliubov quasiparticles scatter off each other, exchanging occupation between modes. The conservation laws of the TFIM are destroyed.
@@ -178,7 +178,7 @@ The Bogoliubov quasiparticles scatter off each other, exchanging occupation betw
 Similarly, if you compute the commutator of \\( A\_m \\) or \\( B\_m \\) with \\( H\_{\text{MFIM}} \\), you will find it is proportional to \\( h\_z \\):
 
 \\[
-[H_{\text{MFIM}}, A_m] = h_z \, (\text{some operator}) \neq 0.
+[H\_{\text{MFIM}}, A\_m] = h\_z (\text{some operator}) \neq 0.
 \\]
 
 The TFIM's conserved quantities become only *approximately* conserved in the MFIM, with the quality of the approximation controlled by the ratio \\( h\_z / J \\) (or \\( h\_z / h\_x \\)). When \\( h\_z \\) is small, the MFIM is "close to integrable," and the \\( A\_m, B\_m \\) operators drift slowly. When \\( h\_z \\) is comparable to the other energy scales, the conservation laws are badly broken, and the system is expected to thermalize.
