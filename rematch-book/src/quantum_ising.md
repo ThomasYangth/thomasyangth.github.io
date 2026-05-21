@@ -39,9 +39,9 @@ where the sum runs over all \\( 2^L \\) bitstrings. The dimension of the Hilbert
 **The Pauli matrices.** You know these from N&C Chapter 2, but let us recall them here because they are the building blocks of everything that follows:
 
 \\[
-X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad
-Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad
-Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+X = \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}, \qquad
+Y = \begin{pmatrix} 0 & -i \\\\ i & 0 \end{pmatrix}, \qquad
+Z = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}.
 \\]
 
 Their physical meaning as operators on a single qubit:
@@ -172,7 +172,7 @@ We work in the computational basis \\( \{|00\rangle, |01\rangle, |10\rangle, |11
 **The \\( Z\_1 Z\_2 \\) term** is diagonal:
 
 \\[
-Z\_1 Z\_2 = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix}.
+Z\_1 Z\_2 = \begin{pmatrix} 1 & 0 & 0 & 0 \\\\ 0 & -1 & 0 & 0 \\\\ 0 & 0 & -1 & 0 \\\\ 0 & 0 & 0 & 1 \end{pmatrix}.
 \\]
 
 This assigns eigenvalue \\( +1 \\) to \\( |00\rangle \\) and \\( |11\rangle \\) (spins aligned) and \\( -1 \\) to \\( |01\rangle \\) and \\( |10\rangle \\) (spins anti-aligned).
@@ -180,19 +180,19 @@ This assigns eigenvalue \\( +1 \\) to \\( |00\rangle \\) and \\( |11\rangle \\) 
 **The \\( X\_1 \\) term** flips the first spin:
 
 \\[
-X\_1 = X \otimes I = \begin{pmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}.
+X\_1 = X \otimes I = \begin{pmatrix} 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \end{pmatrix}.
 \\]
 
 **The \\( X\_2 \\) term** flips the second spin:
 
 \\[
-X\_2 = I \otimes X = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}.
+X\_2 = I \otimes X = \begin{pmatrix} 0 & 1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{pmatrix}.
 \\]
 
 Adding everything together:
 
 \\[
-H = \begin{pmatrix} J & h\_x & h\_x & 0 \\ h\_x & -J & 0 & h\_x \\ h\_x & 0 & -J & h\_x \\ 0 & h\_x & h\_x & J \end{pmatrix}.
+H = \begin{pmatrix} J & h\_x & h\_x & 0 \\\\ h\_x & -J & 0 & h\_x \\\\ h\_x & 0 & -J & h\_x \\\\ 0 & h\_x & h\_x & J \end{pmatrix}.
 \\]
 
 Take a moment to stare at this matrix. The diagonal entries are the classical Ising energies: \\( +J \\) for aligned spins, \\( -J \\) for anti-aligned spins. The off-diagonal entries, all equal to \\( h\_x \\), connect configurations that differ by a single spin flip. This is the transverse field at work -- it mixes classical configurations.
@@ -204,7 +204,7 @@ The symmetric (\\( +1 \\)) sector is spanned by \\( \{|00\rangle + |11\rangle, |
 In the symmetric sector, the Hamiltonian block is:
 
 \\[
-H\_{+} = \begin{pmatrix} J & 2h\_x \\ 2h\_x & -J \end{pmatrix}.
+H\_{+} = \begin{pmatrix} J & 2h\_x \\\\ 2h\_x & -J \end{pmatrix}.
 \\]
 
 This is just a \\( 2 \times 2 \\) matrix. Its eigenvalues are:
@@ -216,7 +216,7 @@ E\_{\pm}^{(+)} = \pm\sqrt{J^2 + 4h\_x^2}.
 In the antisymmetric sector:
 
 \\[
-H\_{-} = \begin{pmatrix} J & 0 \\ 0 & -J \end{pmatrix}.
+H\_{-} = \begin{pmatrix} J & 0 \\\\ 0 & -J \end{pmatrix}.
 \\]
 
 The eigenvalues are simply \\( \pm J \\). (The transverse field does not mix states within this sector because the relevant off-diagonal matrix elements cancel.)

@@ -53,7 +53,7 @@ e^A = \mathrm{diag}(e^{\lambda\_1}, \ldots, e^{\lambda\_D}).
 
 **Example (Pauli matrix).** Consider \\(A = -i\theta  Z\\) where \\(Z = \mathrm{diag}(1, -1)\\). Then
 \\[
-e^{-i\theta Z} = \mathrm{diag}(e^{-i\theta}, e^{i\theta}) = \begin{pmatrix} e^{-i\theta} & 0 \\ 0 & e^{i\theta} \end{pmatrix}.
+e^{-i\theta Z} = \mathrm{diag}(e^{-i\theta}, e^{i\theta}) = \begin{pmatrix} e^{-i\theta} & 0 \\\\ 0 & e^{i\theta} \end{pmatrix}.
 \\]
 More generally, for any Pauli matrix \\(\sigma\\) satisfying \\(\sigma^2 = I\\), we have
 \\[
