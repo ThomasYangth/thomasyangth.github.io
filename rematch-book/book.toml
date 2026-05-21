@@ -5,4 +5,4 @@ src = "src"
 title = "Rematch"
 
 [output.html]
-mathjax-support = true
+additional-js = ["mathjax-config.js"]
