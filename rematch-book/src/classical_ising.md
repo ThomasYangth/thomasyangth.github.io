@@ -38,6 +38,20 @@ The key observation is that the product \\( s\_i s\_{i+1} \\) equals \\( +1 \\) 
 
 For the rest of this chapter, we focus on the ferromagnetic case \\( J > 0 \\).
 
+#### Why "ferromagnet"?
+
+Define the **total magnetization** as the sum of all spins:
+
+\\[
+M = \sum\_{i=1}^{N} s\_i.
+\\]
+
+This quantity measures the net magnetic moment of the system: if most spins point up, \\( M \\) is large and positive; if most point down, it is large and negative; if spins are randomly oriented, \\( M \approx 0 \\).
+
+For a ferromagnet (\\( J > 0 \\)), the lowest-energy states are the fully aligned ones: all spins up (\\( M = +N \\)) or all spins down (\\( M = -N \\)). Both have the maximum possible \\( |M| \\). This means that at low temperatures, the system spontaneously develops a nonzero total magnetization -- it becomes a magnet, even without an external magnetic field pushing the spins in one direction. This is the origin of the name "ferromagnet."
+
+For an antiferromagnet (\\( J < 0 \\)), the ground state alternates up-down-up-down, so \\( M \approx 0 \\). The system has no net magnetic moment.
+
 #### A concrete example: 3-spin chain
 
 Let us work out the energy of every configuration for \\( N = 3 \\) with \\( J > 0 \\). The Hamiltonian is
@@ -73,11 +87,19 @@ The field term \\( -h \sum\_i s\_i \\) favors spins pointing up (\\( s\_i = +1 \
 
 ### 1.3 Statistical Mechanics and the Boltzmann Distribution
 
-So far we have assigned an energy to each configuration. But which configurations does the system actually visit? The answer comes from **statistical mechanics**.
+So far we have assigned an energy to each configuration. But which configuration does the system actually sit in?
+
+#### The ground state
+
+A first answer is simple: the system sits in the **ground state**, the configuration with the lowest energy. This is a natural guess -- physical systems tend to "settle down" to their lowest-energy state, just as a ball rolls to the bottom of a hill. The justification is that any system coupled to an environment will gradually lose energy to its surroundings, and the only state from which no further energy can be extracted is the ground state.
+
+For the ferromagnetic Ising model, the ground states are the fully aligned configurations (all up or all down), as we computed above. So the ground-state picture already explains why a ferromagnet is magnetized.
 
 #### The Boltzmann distribution
 
-At thermal equilibrium at temperature \\( T \\), the probability of finding the system in a configuration \\( \mathbf{s} = (s\_1, \ldots, s\_N) \\) is given by the **Boltzmann distribution**:
+The ground-state picture is correct at zero temperature, but real systems are at finite temperature. At nonzero temperature, the system is constantly exchanging energy with its environment, and it does not sit in the ground state alone -- it fluctuates among many configurations. The question becomes: how likely is each configuration?
+
+The answer comes from **statistical mechanics**. At thermal equilibrium at temperature \\( T \\), the probability of finding the system in a configuration \\( \mathbf{s} = (s\_1, \ldots, s\_N) \\) is given by the **Boltzmann distribution**:
 
 \\[ p(\mathbf{s}) = \frac{1}{Z} e^{-\beta H(\mathbf{s})}, \\]
 
@@ -98,7 +120,7 @@ So the Boltzmann distribution tells us that **low-energy states are more probabl
 
 The inverse temperature \\( \beta = 1/T \\) controls how sharply the distribution is peaked on low-energy states:
 
-- **Low temperature** (\\( \beta \to \infty \\), i.e., \\( T \to 0 \\)): The Boltzmann weight \\( e^{-\beta H} \\) becomes extremely sensitive to energy differences. Only the ground state (or states very close to it in energy) have appreciable probability. The system is **ordered** -- for the ferromagnetic Ising model, this means nearly all spins point the same way.
+- **Low temperature** (\\( \beta \to \infty \\), i.e., \\( T \to 0 \\)): The Boltzmann weight \\( e^{-\beta H} \\) becomes extremely sensitive to energy differences. Only the ground state (or states very close to it in energy) have appreciable probability. The system is **ordered** -- for the ferromagnetic Ising model, this means nearly all spins point the same way. In the \\( T \to 0 \\) limit, the Boltzmann distribution reduces to the ground-state picture we discussed above.
 
 - **High temperature** (\\( \beta \to 0 \\), i.e., \\( T \to \infty \\)): The Boltzmann weight \\( e^{-\beta H} \approx 1 \\) for all configurations, regardless of their energy. Every configuration is equally likely. The system is **disordered** -- spins point up or down at random, and the magnet has no net magnetization.
 
@@ -120,6 +142,42 @@ The partition function is
 
 At low temperature (\\( \beta J \gg 1 \\)), the term \\( 2 e^{2\beta J} \\) dominates, so the system is almost certainly in one of the two ground states. At high temperature (\\( \beta J \ll 1 \\)), all three exponentials are approximately 1, so \\( Z \approx 8 \\) and every configuration has probability \\( \approx 1/8 \\) -- complete randomness.
 
+#### Energy and temperature
+
+There is a precise relationship between temperature and the average energy of a system. The **average energy** (or **internal energy**) at temperature \\( T \\) is the expectation value of the Hamiltonian under the Boltzmann distribution:
+
+\\[
+\langle H \rangle = \sum\_{\mathbf{s}} p(\mathbf{s}) H(\mathbf{s}) = \frac{1}{Z} \sum\_{\mathbf{s}} H(\mathbf{s}) e^{-\beta H(\mathbf{s})}.
+\\]
+
+There is a useful trick: the average energy can be computed from the partition function by taking a derivative,
+
+\\[
+\langle H \rangle = -\frac{\partial}{\partial \beta} \ln Z.
+\\]
+
+Let us carry this out explicitly for our 3-spin chain. We computed \\( Z = 2e^{2\beta J} + 4 + 2e^{-2\beta J} \\). Then
+
+\\[
+\ln Z = \ln\!\left(2e^{2\beta J} + 4 + 2e^{-2\beta J}\right),
+\\]
+
+and differentiating:
+
+\\[
+\langle H \rangle = -\frac{\partial \ln Z}{\partial \beta} = -\frac{4J e^{2\beta J} - 4J e^{-2\beta J}}{2e^{2\beta J} + 4 + 2e^{-2\beta J}} = -\frac{4J \sinh(2\beta J)}{2\cosh(2\beta J) + 2}.
+\\]
+
+Let us check the limits:
+
+- **Low temperature** (\\( \beta J \gg 1 \\)): \\( \sinh(2\beta J) \approx \cosh(2\beta J) \approx \frac{1}{2}e^{2\beta J} \\), so \\( \langle H \rangle \approx -2J \\). This is exactly the ground-state energy -- at low temperature, the system sits in its ground state.
+
+- **High temperature** (\\( \beta J \ll 1 \\)): \\( \sinh(2\beta J) \approx 2\beta J \\) and \\( \cosh(2\beta J) \approx 1 \\), so \\( \langle H \rangle \approx -\frac{4J \cdot 2\beta J}{4} = -2\beta J^2 \approx 0 \\). At high temperature, the system samples all configurations roughly equally, and the positive and negative energy contributions cancel out.
+
+This illustrates a general principle: **temperature controls the average energy of the system**. Low temperature means low energy (close to the ground state), and high temperature means the energy is spread broadly across all configurations.
+
+Conversely, the relationship works the other way: **if we know the average energy of a system, we can determine its temperature**. Since \\( \langle H \rangle \\) is a monotonically increasing function of \\( T \\) (higher temperature means higher energy), there is a one-to-one correspondence between the two. Given a system with a known average energy, we can invert this relationship to find the unique temperature \\( T \\) of the Boltzmann distribution that reproduces that energy. This idea -- that energy determines temperature -- will reappear in the quantum setting when we discuss thermalization in Chapter 5.
+
 #### A glimpse ahead: phase transitions
 
 A natural question is: as we smoothly tune the temperature, does the system transition **sharply** from ordered to disordered, or does the change happen gradually?
@@ -136,4 +194,4 @@ The existence or absence of phase transitions is one of the deepest questions in
 
 **Summary.** The classical Ising model assigns a binary spin \\( s\_i = \pm 1 \\) to each site of a lattice, with an energy function that rewards alignment (for \\( J > 0 \\)) between neighbors. At thermal equilibrium, the probability of each configuration is given by the Boltzmann distribution \\( p \propto e^{-\beta H} \\), where the inverse temperature \\( \beta \\) controls the tradeoff between energetic order and entropic disorder. In the next chapter, we will see how this classical picture is modified when we allow the spins to be quantum mechanical.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-05-21*
