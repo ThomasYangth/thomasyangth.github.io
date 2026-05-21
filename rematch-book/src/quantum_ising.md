@@ -90,17 +90,55 @@ E(s\_1, \ldots, s\_L) = J \sum\_{i=1}^{L-1} s\_i s\_{i+1} + h\_z \sum\_{i=1}^{L}
 
 So at this stage, the quantum model is just the classical model dressed up in operator language. We have gained nothing new. The eigenstates are classical configurations, and the eigenvalues are classical energies. There are no superpositions in sight.
 
-To make something genuinely quantum happen, we need to add a term that does not commute with \\( Z \\).
+In general, for any quantum Hamiltonian \\( H \\) (not just diagonal ones), the eigenstates and eigenvalues are defined by the equation \\( H|n\rangle = E\_n|n\rangle \\). The eigenstates \\( |n\rangle \\) are the states with definite energy, and the eigenvalues \\( E\_n \\) are the corresponding energies. The **ground state** is the eigenstate with the lowest eigenvalue -- the quantum analog of the lowest-energy configuration from Chapter 1. For the diagonal Hamiltonian above, the eigenstates are just computational basis states and the ground state is the classical ground state. But for a general quantum Hamiltonian, the ground state can be a nontrivial superposition, and finding it is a much harder problem.
+
+#### The Gibbs state
+
+In Chapter 1, we discussed the Boltzmann distribution, which assigns probabilities to configurations at finite temperature. The quantum generalization is the **Gibbs state** (or thermal density matrix):
+
+\\[
+\rho\_{\text{th}} = \frac{e^{-\beta H}}{\text{tr}[e^{-\beta H}]},
+\\]
+
+where \\( e^{-\beta H} \\) is the matrix exponential (see Appendix A). If we expand in the energy eigenbasis \\( H|n\rangle = E\_n|n\rangle \\), this becomes
+
+\\[
+\rho\_{\text{th}} = \sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} |n\rangle\langle n|, \qquad \mathcal{Z} = \sum\_n e^{-\beta E\_n}.
+\\]
+
+This is diagonal in the energy eigenbasis, with each eigenstate \\( |n\rangle \\) weighted by \\( e^{-\beta E\_n} \\) -- exactly the Boltzmann distribution applied to the energy levels. For the diagonal Hamiltonian \\( H\_{\text{classical}} \\), the energy eigenstates are just computational basis states, and this reduces to the classical Boltzmann distribution from Chapter 1.
+
+**Thermal expectation values.** Given the Gibbs state, how do we compute the average value of some observable \\( O \\)? In classical statistical mechanics, we would sum \\( O \\) over all configurations weighted by their Boltzmann probabilities: \\( \langle O \rangle = \sum\_{\mathbf{s}} p(\mathbf{s}) O(\mathbf{s}) \\). The quantum analog is
+
+\\[
+\langle O \rangle\_{\text{th}} = \text{tr}[\rho\_{\text{th}} O].
+\\]
+
+Why the trace? Expand \\( \rho\_{\text{th}} \\) in the energy eigenbasis:
+
+\\[
+\text{tr}[\rho\_{\text{th}} O] = \text{tr}\!\left[\sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} |n\rangle\langle n| \cdot O \right] = \sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} \langle n|O|n\rangle.
+\\]
+
+In the last step, we used the fact that the trace of \\( |n\rangle\langle n| O \\) equals \\( \langle n|O|n\rangle \\) (you should verify this -- it follows from the cyclic property of the trace). The result is exactly what you would expect: the average of \\( O \\) is the sum of \\( \langle n|O|n\rangle \\) (the expectation value of \\( O \\) in each eigenstate) weighted by the Boltzmann probability \\( e^{-\beta E\_n}/\mathcal{Z} \\) of being in that eigenstate. This is the quantum version of averaging over configurations.
+
+In particular, the average energy is \\( \langle H \rangle\_{\text{th}} = \text{tr}[\rho\_{\text{th}} H] = \sum\_n E\_n e^{-\beta E\_n}/\mathcal{Z} \\), and as we discussed in Chapter 1, there is a one-to-one relationship between temperature and average energy. We will return to the Gibbs state in Chapter 5 when we discuss thermalization.
+
+So far, our quantum Hamiltonian has been diagonal, and the physics has been entirely classical. To make something genuinely quantum happen, we need to add a term that does not commute with \\( Z \\).
 
 ---
 
 ### 2.3 The Transverse Field: Making It Quantum
 
-The **transverse-field Ising model (TFIM)** is obtained by adding a transverse magnetic field in the \\( x \\)-direction:
+The **transverse-field Ising model (TFIM)** is obtained by adding a magnetic field in the \\( x \\)-direction:
 
 \\[
 H\_{\text{TFIM}} = J \sum\_{i=1}^{L-1} Z\_i Z\_{i+1} + h\_x \sum\_{i=1}^{L} X\_i.
 \\]
+
+Why is this called a "transverse" field? The terminology comes from the physics of spin in a magnetic field. As discussed in Sakurai Section 2.1.5, a spin-\\( 1/2 \\) particle in a magnetic field \\( \mathbf{B} \\) has Hamiltonian \\( H \propto \mathbf{S} \cdot \mathbf{B} = B\_x S\_x + B\_y S\_y + B\_z S\_z \\), where \\( S\_x, S\_y, S\_z \\) are the spin operators (proportional to \\( X, Y, Z \\)). A magnetic field in the \\( z \\)-direction couples to \\( S\_z \propto Z \\), and a field in the \\( x \\)-direction couples to \\( S\_x \propto X \\).
+
+In our model, the Ising interaction \\( Z\_i Z\_{i+1} \\) picks out the \\( z \\)-direction as the preferred axis: spin "up" (\\( |0\rangle \\)) and "down" (\\( |1\rangle \\)) are the eigenstates of \\( Z \\). A field coupled to \\( Z\_i \\) (like the longitudinal field \\( h\_z Z\_i \\) from Section 2.2) is a magnetic field along this same \\( z \\)-axis -- it biases the spin toward \\( |0\rangle \\) or \\( |1\rangle \\) without creating superpositions. A field coupled to \\( X\_i \\) is a magnetic field in the \\( x \\)-direction, **perpendicular** (transverse) to the Ising axis. Its eigenstates are \\( |+\rangle \\) and \\( |-\rangle \\), which are superpositions of \\( |0\rangle \\) and \\( |1\rangle \\). This is why the \\( h\_x X\_i \\) term is called a transverse field.
 
 This seemingly simple addition changes the physics completely. Let us understand why.
 
@@ -268,4 +306,4 @@ This distinction -- integrable vs. non-integrable, thermal vs. non-thermal -- is
 
 In the next chapters, we will develop the tools to make these ideas precise: the eigenstate thermalization hypothesis (ETH), the concept of level statistics, and the machinery of integrability.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-05-21*
