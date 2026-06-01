@@ -4,15 +4,15 @@ In the previous chapters, we built up a picture of quantum dynamics, integrals o
 
 ### 6.1 Defining Slow Modes
 
-Recall from Chapter 3 that an integral of motion satisfies \\( [H, A] = 0 \\), so that \\( A(t) = A \\) for all time. We also introduced approximate IOMs: operators with \\( \|[H, A]\| \\) small but nonzero, whose expectation values drift slowly. Now we want to be more precise about what "slowly changing" means, and we want to add a second requirement.
+Recall from Chapter 3 that an integral of motion satisfies \\( [H, A] = 0 \\), so that \\( A(t) = A \\) for all time. We also introduced approximate IOMs: operators with \\( \\|[H, A]\\| \\) small but nonzero, whose expectation values drift slowly. Now we want to be more precise about what "slowly changing" means, and we want to add a second requirement.
 
 **Slowness.** Given an operator \\( A \\), we define its **timescale** as
 
 \\[
-\tau\_A = \frac{\|A\|}{\|[H, A]\|}.
+\tau\_A = \frac{\\|A\\|}{\\|[H, A]\\|}.
 \\]
 
-This has a natural interpretation: since \\( dA(t)/dt = i[H, A(t)] \\), the ratio \\( \|A\| / \|[H,A]\| \\) estimates how long it takes for \\( A(t) \\) to change appreciably relative to its own size. A large \\( \tau\_A \\) means \\( A \\) evolves slowly. An exact IOM has \\( \tau\_A = \infty \\).
+This has a natural interpretation: since \\( dA(t)/dt = i[H, A(t)] \\), the ratio \\( \\|A\\| / \\|[H,A]\\| \\) estimates how long it takes for \\( A(t) \\) to change appreciably relative to its own size. A large \\( \tau\_A \\) means \\( A \\) evolves slowly. An exact IOM has \\( \tau\_A = \infty \\).
 
 **Simplicity.** Slowness alone is not enough. The Hamiltonian \\( H \\) itself is exactly conserved (\\( [H,H] = 0 \\)), but it is typically a sum of many terms spread across the whole system -- it does not tell us anything about *local* physics. More dramatically, any function of \\( H \\) (such as \\( H^2 \\) or \\( e^{iH} \\)) is also exactly conserved, but these are generically very complicated operators with no simple physical interpretation.
 
@@ -76,7 +76,7 @@ The Lindbladian approach identifies slow modes by coupling to an environment. An
 For the ensemble of **random product states** (RPS), each qubit is independently in a uniformly random pure state. The **ensemble variance norm** is defined as
 
 \\[
-\|A\|\_{\text{RPS}}^2 = \text{Var}\_{\mathcal{E}}\left[\langle \psi | A | \psi \rangle\right],
+\\|A\\|\_{\text{RPS}}^2 = \text{Var}\_{\mathcal{E}}\left[\langle \psi | A | \psi \rangle\right],
 \\]
 
 the variance of the expectation value of \\( A \\) over random product states \\( |\psi\rangle \\). If \\( A \\) is a simple, local operator, different product states will give noticeably different expectation values, so the variance is large. If \\( A \\) is a complicated many-body operator, its expectation value is nearly the same for every product state (it "self-averages"), so the variance is tiny.
@@ -84,17 +84,17 @@ the variance of the expectation value of \\( A \\) over random product states \\
 There is a beautiful formula for this norm in the Pauli basis. Expand \\( A = \sum\_P c\_P P \\) where \\( P \\) are Pauli strings. Then
 
 \\[
-\|A\|\_{\text{RPS}}^2 = \sum\_P |c\_P|^2 3^{-|P|},
+\\|A\\|\_{\text{RPS}}^2 = \sum\_P |c\_P|^2 3^{-|P|},
 \\]
 
 where \\( |P| \\) denotes the weight of the Pauli string \\( P \\) (the number of non-identity factors). Notice the factor \\( 3^{-|P|} \\): Pauli strings with larger weight are exponentially suppressed. This is exactly the quantification of simplicity we want -- the norm is dominated by contributions from low-weight (simple) Pauli strings.
 
-We can write this more abstractly as \\( \|A\|\_{\text{RPS}}^2 = \langle A, \mathcal{M}\_{\text{RPS}}[A] \rangle \\), where \\( \mathcal{M}\_{\text{RPS}} \\) is a superoperator (a diagonal matrix in the Pauli basis) that multiplies each Pauli component by \\( 3^{-|P|} \\), and \\( \langle \cdot, \cdot \rangle \\) is the Hilbert-Schmidt inner product \\( \langle A, B \rangle = \text{tr}(A^\dagger B) / 2^n \\).
+We can write this more abstractly as \\( \\|A\\|\_{\text{RPS}}^2 = \langle A, \mathcal{M}\_{\text{RPS}}[A] \rangle \\), where \\( \mathcal{M}\_{\text{RPS}} \\) is a superoperator (a diagonal matrix in the Pauli basis) that multiplies each Pauli component by \\( 3^{-|P|} \\), and \\( \langle \cdot, \cdot \rangle \\) is the Hilbert-Schmidt inner product \\( \langle A, B \rangle = \text{tr}(A^\dagger B) / 2^n \\).
 
-**The \\( \nu \\)-\\( \tau \\) plane.** Every traceless operator \\( A \\) (normalized so that \\( \|A\| = 1 \\) in the Hilbert-Schmidt norm) maps to a point in the **\\( \nu \\)-\\( \tau \\) plane**:
+**The \\( \nu \\)-\\( \tau \\) plane.** Every traceless operator \\( A \\) (normalized so that \\( \\|A\\| = 1 \\) in the Hilbert-Schmidt norm) maps to a point in the **\\( \nu \\)-\\( \tau \\) plane**:
 
 \\[
-\tau\_A = \frac{1}{\|[H, A]\|}, \qquad \nu\_A = \|A\|\_{\mathcal{E}}^2.
+\tau\_A = \frac{1}{\\|[H, A]\\|}, \qquad \nu\_A = \\|A\\|\_{\mathcal{E}}^2.
 \\]
 
 Here \\( \tau\_A \\) measures slowness (large \\( \tau \\) means slow) and \\( \nu\_A \\) measures simplicity (large \\( \nu \\) means simple). An operator that is both slow and simple sits in the **upper-right** corner of this plane.
@@ -102,7 +102,7 @@ Here \\( \tau\_A \\) measures slowness (large \\( \tau \\) means slow) and \\( \
 The **upper envelope** \\( \nu(\tau) \\) is defined as
 
 \\[
-\nu(\tau) = \max\_{\substack{A: \|A\|=1 \\ \tau\_A \geq \tau}} \nu\_A.
+\nu(\tau) = \max\_{\substack{A: \\|A\\|=1 \\ \tau\_A \geq \tau}} \nu\_A.
 \\]
 
 It answers the question: among all operators that are at least as slow as \\( \tau \\), what is the maximum simplicity? The shape of \\( \nu(\tau) \\) encodes the system's thermalization properties.
@@ -178,4 +178,4 @@ The ultimate goal of this project is to map out the **slow-mode structure** acro
 
 This is the central computational project of the book. The tools are linear algebra and exact diagonalization; the physics spans everything we have developed in the previous five chapters.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-06-01*

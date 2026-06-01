@@ -137,10 +137,10 @@ The transverse field **breaks** the conservation of total magnetization. Intuiti
 In many physically interesting systems, we encounter operators that *almost* commute with the Hamiltonian:
 
 \\[
-\| [H, A] \| \approx 0 \quad \text{(small but nonzero)}.
+\\| [H, A] \\| \approx 0 \quad \text{(small but nonzero)}.
 \\]
 
-Here \\( \| \cdot \| \\) denotes an appropriate operator norm. Such an operator \\( A \\) is called an **approximate integral of motion** (approximate IOM).
+Here \\( \\| \cdot \\| \\) denotes an appropriate operator norm. Such an operator \\( A \\) is called an **approximate integral of motion** (approximate IOM).
 
 What does this mean physically? Return to the Heisenberg equation:
 
@@ -148,7 +148,7 @@ What does this mean physically? Return to the Heisenberg equation:
 \frac{dA(t)}{dt} = i[H, A(t)].
 \\]
 
-If the right-hand side is small (in norm), then \\( A(t) \\) changes slowly. The expectation value \\( \langle A \rangle \\) is *nearly* constant -- it is conserved to a good approximation over some timescale, but eventually drifts. The smaller \\( \| [H, A] \| \\) is, the longer \\( A \\) remains approximately conserved.
+If the right-hand side is small (in norm), then \\( A(t) \\) changes slowly. The expectation value \\( \langle A \rangle \\) is *nearly* constant -- it is conserved to a good approximation over some timescale, but eventually drifts. The smaller \\( \\| [H, A] \\| \\) is, the longer \\( A \\) remains approximately conserved.
 
 **Example.** Consider the TFIM with a weak transverse field, \\( h \ll 1 \\). We showed above that \\( [H\_{\text{TFIM}}, M] \\) is proportional to \\( h \\). When \\( h \\) is small, the total magnetization is an approximate IOM: it is nearly conserved for times \\( t \ll 1/h \\), but eventually the transverse field causes it to drift.
 
@@ -156,4 +156,4 @@ Approximate integrals of motion turn out to be far more than a curiosity. In cer
 
 **Looking forward.** The central question motivating the rest of this book is: *what physical consequences do approximate integrals of motion have?* In particular, when a system possesses many approximate IOMs, how does this constrain its approach to thermal equilibrium? This question will lead us to the phenomena of thermalization, many-body localization, and beyond.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-06-01*

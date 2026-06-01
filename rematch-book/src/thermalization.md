@@ -90,7 +90,7 @@ where the Lagrange multipliers \\( \lambda\_j \\) are fixed by requiring \\( \te
 
 The story so far has two clean endpoints: systems with no extra conserved quantities thermalize to the Gibbs state, and integrable systems with many exact conserved quantities thermalize to a GGE. But what about systems that are *close* to integrable -- that have *approximate* integrals of motion?
 
-Recall from Chapter 3 that an approximate IOM is an operator \\( A \\) with \\( \|[H, A]\| \\) small but nonzero. The expectation value \\( \langle A \rangle \\) is nearly constant for times \\( t \lesssim \tau \\), where \\( \tau \\) is set by the size of the commutator, but eventually drifts.
+Recall from Chapter 3 that an approximate IOM is an operator \\( A \\) with \\( \\|[H, A]\\| \\) small but nonzero. The expectation value \\( \langle A \rangle \\) is nearly constant for times \\( t \lesssim \tau \\), where \\( \tau \\) is set by the size of the commutator, but eventually drifts.
 
 This leads to a striking two-stage relaxation process called **prethermalization**:
 
@@ -106,7 +106,7 @@ The prethermal regime can be extremely long-lived when the system is close to in
 H\_{\text{MFIM}} = -\sum\_i Z\_i Z\_{i+1} - h\_x \sum\_i X\_i - h\_z \sum\_i Z\_i.
 \\]
 
-When the longitudinal field \\( h\_z \\) is small, the MFIM is a weak perturbation of the TFIM. The TFIM is integrable and possesses extensively many exact IOMs (Chapter 4). When \\( h\_z \\) is turned on, these IOMs are no longer exactly conserved, but they become **approximate** IOMs of the MFIM with \\( \|[H\_{\text{MFIM}}, A]\| \sim h\_z \\). The prethermal timescale is therefore \\( \tau \sim 1/h\_z \\).
+When the longitudinal field \\( h\_z \\) is small, the MFIM is a weak perturbation of the TFIM. The TFIM is integrable and possesses extensively many exact IOMs (Chapter 4). When \\( h\_z \\) is turned on, these IOMs are no longer exactly conserved, but they become **approximate** IOMs of the MFIM with \\( \\|[H\_{\text{MFIM}}, A]\\| \sim h\_z \\). The prethermal timescale is therefore \\( \tau \sim 1/h\_z \\).
 
 Concretely: if you prepare the MFIM in some initial state and track local observables, you will first see them relax (on a timescale set by \\( 1/h\_x \\)) to values that are *not* the thermal values, but rather the values predicted by a GGE built from the TFIM's conserved quantities. The system stays near this prethermal plateau for a time of order \\( 1/h\_z \\), and only after this long time does it finally relax to the true Gibbs state.
 
@@ -116,4 +116,4 @@ This is a beautiful example of how the ideas from Chapters 3 and 4 -- integrals 
 
 **Summary.** The Gibbs state \\( \rho\_{\text{th}} = e^{-\beta H}/\mathcal{Z} \\) is the quantum generalization of the Boltzmann distribution. Thermalization is the statement that local observables relax to their Gibbs state values under unitary evolution. Exact integrals of motion prevent full thermalization, because they pin certain expectation values to their initial (generically non-thermal) values; integrable systems instead relax to generalized Gibbs ensembles. Approximate integrals of motion lead to prethermalization: the system appears non-thermal on intermediate timescales before eventually reaching true thermal equilibrium. The MFIM, as a weakly broken integrable system, is a concrete example of prethermalization.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-06-01*

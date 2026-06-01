@@ -6,33 +6,33 @@ This appendix collects the linear-algebra facts that appear repeatedly throughou
 
 ### A.1 Matrix Norms
 
-A **norm** on matrices assigns a non-negative size \\(\|A\|\\) to every matrix \\(A\\), with the usual properties: \\(\|A\| = 0\\) iff \\(A = 0\\), \\(\|\alpha A\| = |\alpha| \|A\|\\), and the triangle inequality \\(\|A + B\| \leq \|A\| + \|B\|\\). Three norms appear most often in quantum information.
+A **norm** on matrices assigns a non-negative size \\(\\|A\\|\\) to every matrix \\(A\\), with the usual properties: \\(\\|A\\| = 0\\) iff \\(A = 0\\), \\(\\|\alpha A\\| = |\alpha| \\|A\\|\\), and the triangle inequality \\(\\|A + B\\| \leq \\|A\\| + \\|B\\|\\). Three norms appear most often in quantum information.
 
 **Operator norm (spectral norm).** The operator norm of \\(A\\) is its largest singular value:
 \\[
-\|A\|\_{\mathrm{op}} = \sigma\_{\max}(A) = \max\_{|v\rangle \neq 0} \frac{\|A|v\rangle\|}{\||v\rangle\|}.
+\\|A\\|\_{\mathrm{op}} = \sigma\_{\max}(A) = \max\_{|v\rangle \neq 0} \frac{\\|A|v\rangle\\|}{\\||v\rangle\\|}.
 \\]
-For a Hermitian matrix, this equals the largest absolute eigenvalue. The operator norm is *submultiplicative*: \\(\|AB\|\_{\mathrm{op}} \leq \|A\|\_{\mathrm{op}}\|B\|\_{\mathrm{op}}\\).
+For a Hermitian matrix, this equals the largest absolute eigenvalue. The operator norm is *submultiplicative*: \\(\\|AB\\|\_{\mathrm{op}} \leq \\|A\\|\_{\mathrm{op}}\\|B\\|\_{\mathrm{op}}\\).
 
 **Trace norm.** The trace norm is the sum of the singular values:
 \\[
-\|A\|\_{\mathrm{tr}} = \mathrm{tr}\left(\sqrt{A^\dagger A}\right) = \sum\_i \sigma\_i(A).
+\\|A\\|\_{\mathrm{tr}} = \mathrm{tr}\left(\sqrt{A^\dagger A}\right) = \sum\_i \sigma\_i(A).
 \\]
-This norm is central to distinguishing quantum states: the trace distance between density matrices \\(\rho\\) and \\(\sigma\\) is \\(\frac{1}{2}\|\rho - \sigma\|\_{\mathrm{tr}}\\).
+This norm is central to distinguishing quantum states: the trace distance between density matrices \\(\rho\\) and \\(\sigma\\) is \\(\frac{1}{2}\\|\rho - \sigma\\|\_{\mathrm{tr}}\\).
 
 **Frobenius norm (Hilbert-Schmidt norm).** The Frobenius norm treats the matrix as a vector of its entries:
 \\[
-\|A\|\_F = \sqrt{\mathrm{tr}(A^\dagger A)} = \sqrt{\sum\_{i,j} |A\_{ij}|^2}.
+\\|A\\|\_F = \sqrt{\mathrm{tr}(A^\dagger A)} = \sqrt{\sum\_{i,j} |A\_{ij}|^2}.
 \\]
-Equivalently, \\(\|A\|\_F = \sqrt{\sum\_i \sigma\_i^2}\\). The Frobenius norm comes from the **Hilbert-Schmidt inner product** \\(\langle A, B \rangle = \mathrm{tr}(A^\dagger B)\\), which makes the space of operators into a Hilbert space in its own right. This is the norm we will use most often in this book: it is the natural choice for many-body operators and arises whenever we measure the "size" of an error by averaging over all input states.
+Equivalently, \\(\\|A\\|\_F = \sqrt{\sum\_i \sigma\_i^2}\\). The Frobenius norm comes from the **Hilbert-Schmidt inner product** \\(\langle A, B \rangle = \mathrm{tr}(A^\dagger B)\\), which makes the space of operators into a Hilbert space in its own right. This is the norm we will use most often in this book: it is the natural choice for many-body operators and arises whenever we measure the "size" of an error by averaging over all input states.
 
 **Relations between norms.** For a \\(D \times D\\) matrix \\(A\\),
 \\[
-\|A\|\_{\mathrm{op}}  \leq  \|A\|\_F  \leq  \sqrt{D}\|A\|\_{\mathrm{op}}.
+\\|A\\|\_{\mathrm{op}}  \leq  \\|A\\|\_F  \leq  \sqrt{D}\\|A\\|\_{\mathrm{op}}.
 \\]
 The left inequality follows because \\(\sigma\_{\max} \leq \sqrt{\sum\_i \sigma\_i^2}\\). The right inequality follows because \\(A\\) has at most \\(D\\) nonzero singular values, each at most \\(\sigma\_{\max}\\), so \\(\sum\_i \sigma\_i^2 \leq D \sigma\_{\max}^2\\).
 
-**Example.** Let \\(A = \mathrm{diag}(3, 1, 1)\\). Then \\(\|A\|\_{\mathrm{op}} = 3\\), \\(\|A\|\_F = \sqrt{9 + 1 + 1} = \sqrt{11}\\), and \\(\|A\|\_{\mathrm{tr}} = 5\\). Note \\(3 \leq \sqrt{11} \leq \sqrt{3} \cdot 3\\), consistent with the bounds above.
+**Example.** Let \\(A = \mathrm{diag}(3, 1, 1)\\). Then \\(\\|A\\|\_{\mathrm{op}} = 3\\), \\(\\|A\\|\_F = \sqrt{9 + 1 + 1} = \sqrt{11}\\), and \\(\\|A\\|\_{\mathrm{tr}} = 5\\). Note \\(3 \leq \sqrt{11} \leq \sqrt{3} \cdot 3\\), consistent with the bounds above.
 
 ---
 
@@ -44,7 +44,7 @@ The exponential of a square matrix \\(A\\) is defined by the power series
 \\[
 e^A = \sum\_{n=0}^{\infty} \frac{A^n}{n!} = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \cdots
 \\]
-This series converges for every finite matrix \\(A\\) (convergence can be checked using the Frobenius norm, since \\(\|A^n\|\_F \leq \|A\|\_F^n\\)).
+This series converges for every finite matrix \\(A\\) (convergence can be checked using the Frobenius norm, since \\(\\|A^n\\|\_F \leq \\|A\\|\_F^n\\)).
 
 **Example (diagonal matrix).** If \\(A = \mathrm{diag}(\lambda\_1, \ldots, \lambda\_D)\\), the series acts entry-by-entry:
 \\[
@@ -171,7 +171,7 @@ so the error per step is \\(O(\epsilon^2)\\) and after \\(n = 1/\epsilon\\) step
 
 For a *finite* \\(n\\), the first-order Trotter approximation incurs an error
 \\[
-\left\|\left(e^{A/n} e^{B/n}\right)^n - e^{A+B}\right\| = O\left(\frac{1}{n}\right).
+\left\\|\left(e^{A/n} e^{B/n}\right)^n - e^{A+B}\right\\| = O\left(\frac{1}{n}\right).
 \\]
 A better approximation is the **symmetric (second-order) Trotter splitting**:
 \\[
@@ -181,4 +181,4 @@ whose error scales as \\(O(1/n^2)\\).
 
 **Why this matters.** In quantum simulation, we often have a Hamiltonian \\(H = H\_1 + H\_2 + \cdots + H\_k\\) where each \\(H\_j\\) is easy to exponentiate individually (e.g., a local term), but \\(H\\) itself is not. Trotterization lets us approximate the full time evolution \\(e^{-iHt}\\) as a product of simple unitaries, at the cost of a controllable error. This is the foundation of digital quantum simulation algorithms.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-06-01*
