@@ -117,7 +117,7 @@ This is diagonal in the energy eigenbasis, with each eigenstate \\( |n\rangle \\
 Why the trace? Expand \\( \rho\_{\text{th}} \\) in the energy eigenbasis:
 
 \\[
-\text{tr}[\rho\_{\text{th}} O] = \text{tr}\!\left[\sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} |n\rangle\langle n| \cdot O \right] = \sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} \langle n|O|n\rangle.
+\text{tr}[\rho\_{\text{th}} O] = \text{tr}\left[\sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} |n\rangle\langle n| \cdot O \right] = \sum\_n \frac{e^{-\beta E\_n}}{\mathcal{Z}} \langle n|O|n\rangle.
 \\]
 
 In the last step, we used the fact that the trace of \\( |n\rangle\langle n| O \\) equals \\( \langle n|O|n\rangle \\) (you should verify this -- it follows from the cyclic property of the trace). The result is exactly what you would expect: the average of \\( O \\) is the sum of \\( \langle n|O|n\rangle \\) (the expectation value of \\( O \\) in each eigenstate) weighted by the Boltzmann probability \\( e^{-\beta E\_n}/\mathcal{Z} \\) of being in that eigenstate. This is the quantum version of averaging over configurations.

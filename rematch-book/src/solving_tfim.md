@@ -1,4 +1,4 @@
-## Chapter 4: Solving the TFIM
+## Chapter 5: Solving the TFIM
 
 In Chapter 2, we claimed that the transverse-field Ising model (TFIM) is exactly solvable, and in Chapter 3, we saw that integrability means possessing a full set of integrals of motion. In this chapter, we make both of these statements concrete. We will sketch how the TFIM is solved, write down its conserved quantities explicitly, and explain why adding a longitudinal field destroys this beautiful structure.
 
@@ -107,19 +107,24 @@ Let us write out the first few explicitly:
 
 Each \\( A\_m \\) has range \\( m+1 \\) (it acts nontrivially on \\( m+1 \\) consecutive sites). The longer the string, the more "nonlocal" the conserved quantity.
 
-**The \\( B\_m \\) family.** These are slightly more involved because they depend on the Hamiltonian parameters \\( J \\) and \\( h \\). For \\( m \geq 2 \\):
+**The \\( B\_m \\) family.** These are slightly more involved because they depend on the Hamiltonian parameters \\( J \\) and \\( h \\). For \\( m \geq 2 \\), in compact notation:
 
 \\[
-B\_m = J \sum\_i Z\_i X\_{i+1} \cdots X\_{i+m-1} Z\_{i+m} - h \sum\_i Z\_i X\_{i+1} \cdots X\_{i+m-2} Z\_{i+m-1} - h \sum\_i Y\_i X\_{i+1} \cdots X\_{i+m-2} Y\_{i+m-1},
+B\_m = J Z X^{m} Z - h Z X^{m-1} Z - h Y X^{m-1} Y + J Y X^{m-2} Y \qquad (m \geq 2).
 \\]
 
-or in compact notation:
+Expanding the sum explicitly, this means:
 
 \\[
-B\_m = J Z X^{m-1} Z - h Z X^{m-2} Z - h Y X^{m-2} Y \qquad (m \geq 2).
+B\_m = J \sum\_i Z\_i X\_{i+1} \cdots X\_{i+m} Z\_{i+m+1} - h \sum\_i Z\_i X\_{i+1} \cdots X\_{i+m-1} Z\_{i+m} - h \sum\_i Y\_i X\_{i+1} \cdots X\_{i+m-1} Y\_{i+m} + J \sum\_i Y\_i X\_{i+1} \cdots X\_{i+m-2} Y\_{i+m-1}.
 \\]
 
-The first member of this family is special:
+Each \\( B\_m \\) has range \\( m+2 \\) (set by the leading \\( ZX^mZ \\) term). The first two members are:
+
+- \\( B\_2 = J ZX^2Z - h ZXZ - h YXY + J YY \\): spans four sites at most.
+- \\( B\_3 = J ZX^3Z - h ZX^2Z - h YX^2Y + J YXY \\): spans five sites at most.
+
+The first member \\( B\_1 \\) is a special case with an extra single-site term:
 
 \\[
 B\_1 = J \sum\_i Z\_i X\_{i+1} Z\_{i+2} - h \sum\_i Z\_i Z\_{i+1} - h \sum\_i Y\_i Y\_{i+1} - J \sum\_i X\_i,
@@ -187,4 +192,4 @@ The TFIM's conserved quantities become only *approximately* conserved in the MFI
 
 However -- and this is the central question motivating the research project -- the MFIM is not equally chaotic everywhere in parameter space. Near the integrable lines (\\( h\_z = 0 \\) or \\( h\_x = 0 \\)), remnants of the conservation laws persist as approximate IOMs, and thermalization is slower or incomplete. The degree to which the system thermalizes depends on where you sit in the \\( (h\_z, h\_x) \\) parameter plane. Understanding this landscape -- how approximate conservation laws emerge, how they constrain dynamics, and how they eventually break down -- is the problem we will tackle in the chapters ahead.
 
-*Last modified: 2026-05-20*
+*Last modified: 2026-05-31*

@@ -1,6 +1,6 @@
-## Chapter 5: Thermalization and Its Absence
+## Chapter 6: Thermalization and Its Absence
 
-In the previous chapters, we built up the tools needed to ask one of the deepest questions in quantum statistical mechanics: *does a closed quantum system reach thermal equilibrium?* We have the Hamiltonian and its dynamics (Chapter 3), the notion of integrals of motion that constrain those dynamics (Chapters 3 and 4), and concrete models -- the TFIM and MFIM -- that illustrate both solvable and non-solvable cases (Chapters 2 and 4). In this chapter, we bring these ideas together.
+In the previous chapters, we built up the tools needed to ask one of the deepest questions in quantum statistical mechanics: *does a closed quantum system reach thermal equilibrium?* We have the Hamiltonian and its dynamics (Chapter 3), the notion of integrals of motion that constrain those dynamics (Chapters 3 and 5), and concrete models -- the TFIM and MFIM -- that illustrate both solvable and non-solvable cases (Chapters 2 and 5). In this chapter, we bring these ideas together.
 
 ### 5.1 The Gibbs State
 
@@ -81,7 +81,7 @@ For a generic system, the only integral of motion is the Hamiltonian itself (and
 What happens instead? The system reaches a **generalized Gibbs ensemble** (GGE). If \\( A\_1, A\_2, \ldots, A\_k \\) are all the independent integrals of motion, the GGE is the density matrix
 
 \\[
-\rho\_{\text{GGE}} = \frac{1}{\mathcal{Z}\_{\text{GGE}}} \exp\!\left( -\sum\_{j=1}^{k} \lambda\_j A\_j \right),
+\rho\_{\text{GGE}} = \frac{1}{\mathcal{Z}\_{\text{GGE}}} \exp\left( -\sum\_{j=1}^{k} \lambda\_j A\_j \right),
 \\]
 
 where the Lagrange multipliers \\( \lambda\_j \\) are fixed by requiring \\( \text{tr}[\rho\_{\text{GGE}} A\_j] = \langle \psi(0) | A\_j | \psi(0) \rangle \\) for each \\( j \\). This is the most general "thermal-like" state that respects all the conservation laws. The ordinary Gibbs state is the special case where the only conserved quantity is the energy \\( H \\), and the single Lagrange multiplier is the inverse temperature \\( \beta \\).

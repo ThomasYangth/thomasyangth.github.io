@@ -16,7 +16,7 @@ For a Hermitian matrix, this equals the largest absolute eigenvalue. The operato
 
 **Trace norm.** The trace norm is the sum of the singular values:
 \\[
-\|A\|\_{\mathrm{tr}} = \mathrm{tr}\!\left(\sqrt{A^\dagger A}\right) = \sum\_i \sigma\_i(A).
+\|A\|\_{\mathrm{tr}} = \mathrm{tr}\left(\sqrt{A^\dagger A}\right) = \sum\_i \sigma\_i(A).
 \\]
 This norm is central to distinguishing quantum states: the trace distance between density matrices \\(\rho\\) and \\(\sigma\\) is \\(\frac{1}{2}\|\rho - \sigma\|\_{\mathrm{tr}}\\).
 
@@ -171,7 +171,7 @@ so the error per step is \\(O(\epsilon^2)\\) and after \\(n = 1/\epsilon\\) step
 
 For a *finite* \\(n\\), the first-order Trotter approximation incurs an error
 \\[
-\left\|\left(e^{A/n} e^{B/n}\right)^n - e^{A+B}\right\| = O\!\left(\frac{1}{n}\right).
+\left\|\left(e^{A/n} e^{B/n}\right)^n - e^{A+B}\right\| = O\left(\frac{1}{n}\right).
 \\]
 A better approximation is the **symmetric (second-order) Trotter splitting**:
 \\[

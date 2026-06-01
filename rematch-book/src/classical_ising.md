@@ -159,7 +159,7 @@ There is a useful trick: the average energy can be computed from the partition f
 Let us carry this out explicitly for our 3-spin chain. We computed \\( Z = 2e^{2\beta J} + 4 + 2e^{-2\beta J} \\). Then
 
 \\[
-\ln Z = \ln\!\left(2e^{2\beta J} + 4 + 2e^{-2\beta J}\right),
+\ln Z = \ln\left(2e^{2\beta J} + 4 + 2e^{-2\beta J}\right),
 \\]
 
 and differentiating:

@@ -1,4 +1,4 @@
-## Chapter 6: Slow Modes in the Quantum Ising Model
+## Chapter 7: Slow Modes in the Quantum Ising Model
 
 In the previous chapters, we built up a picture of quantum dynamics, integrals of motion, and thermalization. We saw that exact IOMs (as in the TFIM) prevent a system from reaching thermal equilibrium, while systems without IOMs (as in the MFIM at generic parameters) are expected to thermalize. But the boundary between these two regimes is not sharp. In practice, we care about operators that are *approximately* conserved -- operators that change slowly under time evolution. This chapter introduces the concept of **slow modes**, connects it to two concrete mathematical frameworks, and lays out the numerical project that ties everything together.
 
@@ -76,7 +76,7 @@ The Lindbladian approach identifies slow modes by coupling to an environment. An
 For the ensemble of **random product states** (RPS), each qubit is independently in a uniformly random pure state. The **ensemble variance norm** is defined as
 
 \\[
-\|A\|\_{\text{RPS}}^2 = \text{Var}\_{\mathcal{E}}\!\left[\langle \psi | A | \psi \rangle\right],
+\|A\|\_{\text{RPS}}^2 = \text{Var}\_{\mathcal{E}}\left[\langle \psi | A | \psi \rangle\right],
 \\]
 
 the variance of the expectation value of \\( A \\) over random product states \\( |\psi\rangle \\). If \\( A \\) is a simple, local operator, different product states will give noticeably different expectation values, so the variance is large. If \\( A \\) is a complicated many-body operator, its expectation value is nearly the same for every product state (it "self-averages"), so the variance is tiny.
