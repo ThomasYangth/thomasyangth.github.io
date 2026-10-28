@@ -8,17 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-My name is Tian-Hua Yang. I am currently a third-year graduate student in the Department of Physics at Princeton University. My advisor is <a href="https://phy.princeton.edu/people/dmitry-abanin">Prof. Dima Abanin</a>.
+My name is Tian-Hua Yang (杨天骅). I am currently a fourth-year graduate student in the Department of Physics at Princeton University. My advisor is <a href="https://phy.princeton.edu/people/dmitry-abanin">Prof. Dima Abanin</a>.
 
-My research interest lies in the theory of many-body quantum dynamics. Broadly, I am interesting in all sorts of interesting phenomena and emergent structure hidden intricatedly in the vast Hilbert space of quantum many-body systems. I am working on a range of topics, including:
-<ul>
-<li>Dissipative (Lindbladian) dynamics, with an operator-space perspective;</li>
-<li>Hamiltonian learning;</li>
-<li>Quantum thermalization;</li>
-<li>Hilbert space fragmentation;</li>
-</ul>
+My main research interest lies in the theory of many-body quantum dynamics. I am mainly interested in the problem of quantum thermalization. My <a href="https://arxiv.org/abs/2604.13172">recent work</a> developed a theory that establishes a rigorous link between quantum thermalization and (roughly speaking) the absence of conserved quantities. I have been following up on that direction to (1) connect the state-space and operator-space viewpoints of quantum thermalization and (2) establish rigorous results about thermalization.
 
-I am also generally interested in: quantum simulations, non-Hermitian physics, and applying novel mathematical tools to quantum many-body physics.
+Recently, I have also been interested in the theory of neural networks, in particular understanding feature learning.
 
 See a list of my publications on <a href="https://scholar.google.com/citations?user=MXF9R18AAAAJ&hl=en">Google Scholar</a>.
 
